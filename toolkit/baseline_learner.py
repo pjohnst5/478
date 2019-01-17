@@ -20,8 +20,12 @@ class BaselineLearner(SupervisedLearner):
     def train(self, features, labels):
         """
         :type features: Matrix
+            All but last column
         :type labels: Matrix
+            Answer
+
         """
+        features.print()
         self.labels = []
         for i in range(labels.cols):
             if labels.value_count(i) == 0:
@@ -36,6 +40,3 @@ class BaselineLearner(SupervisedLearner):
         """
         del labels[:]
         labels += self.labels
-
-
-
