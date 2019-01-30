@@ -23,7 +23,7 @@ class MLSystemManager:
         :rtype: SupervisedLearner
         """
         modelmap = {
-            #"baseline": BaselineLearner(),
+            "baseline": BaselineLearner(),
             "perceptron": PerceptronLearner(),
             #"neuralnet": NeuralNetLearner(),
             #"decisiontree": DecisionTreeLearner(),

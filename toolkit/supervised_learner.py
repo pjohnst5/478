@@ -75,14 +75,10 @@ class SupervisedLearner:
                     raise Exception("The label is out of range")
                 self.predict(feat, prediction)
                 pred = int(prediction[0])
+                #print("pred: ", pred, "\n")
                 if confusion:
                     confusion.set(targ, pred, confusion.get(targ, pred)+1)
                 if pred == targ:
                     correct_count += 1
 
             return correct_count / features.rows
-
-
-
-
-
