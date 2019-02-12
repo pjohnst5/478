@@ -12,8 +12,6 @@ class PerceptronLearner(SupervisedLearner):
     This is the Perceptron Learner
     """
 
-    labels = []
-
     def __init__(self):
         pass
 
