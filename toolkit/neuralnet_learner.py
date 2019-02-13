@@ -124,11 +124,26 @@ class NeuralNetLearner(SupervisedLearner):
             for inp in self.inputIndexes:
                 self.delta[inp, num] = (self.learningRate * self.error[num] * self.output[inp]) + (self.momentum * self.delta[inp,num])
 
+        #update weights
+        self.weights = self.weights + self.delta
+
         for key in self.error:
-            print("err_", key, ": ", self.error[key])
+            print("e_", key, ": ", self.error[key])
         print("\n")
 
-        print("delta\n", self.delta, "\n")
+        print("w_0=", self.weights[4,0])
+        print("w_1=", self.weights[1,0])
+        print("w_2=", self.weights[2,0])
+        print("w_3=", self.weights[3,0])
+        print("w_4=", self.weights[7,1])
+        print("w_5=", self.weights[5,1])
+        print("w_6=", self.weights[6,1])
+        print("w_7=", self.weights[7,2])
+        print("w_8=", self.weights[5,2])
+        print("w_9=", self.weights[6,2])
+        print("w_10=", self.weights[7,3])
+        print("w_11=", self.weights[5,3])
+        print("w_12=", self.weights[6,3], "\n")
 
     def train(self, features, labels):
         self.learningRate = 0.175
@@ -142,6 +157,7 @@ class NeuralNetLearner(SupervisedLearner):
 
         done = False
         inputIndex = 0
+        hey = 0
 
         while not done:
             singleInput = inputs[inputIndex]
@@ -150,7 +166,9 @@ class NeuralNetLearner(SupervisedLearner):
             self.forwardProp(singleInput)
             self.backProp(label)
 
-            done = True
+            if inputIndex == 2:
+                done = True
+            inputIndex += 1
 
         pass
 
