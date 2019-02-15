@@ -17,13 +17,17 @@ class NeuralNetLearner(SupervisedLearner):
         pass
 
     def createNetwork(self, out, hid, inp):
+        #Learning rate and momentum
+        self.learningRate = 0.175
+        self.momentum = 0.9
+
         #set number of nodes
         NUM_OUTPUT_NODES = out
         NUM_HIDDEN_NODES = hid #(including bias node)
         NUM_INPUT_NODES = inp
         NUM_TOTAL_NODES = NUM_OUTPUT_NODES + NUM_HIDDEN_NODES + NUM_INPUT_NODES
 
-        #make arrays to store node indexes
+        #make arrays to store node indexes and targets
         self.outputIndexes = []
         self.hiddenIndexes = []
         self.inputIndexes = []
@@ -104,9 +108,21 @@ class NeuralNetLearner(SupervisedLearner):
         print("\n")
 
     def backProp(self, label):
+        #Set up target array
+        self.targets = np.zeros(len(self.outputIndexes))
+        #If it's continuous, keep the label as is
+        if len(self.targets) == 1:
+            self.targets[0] = label
+        #if it's nominal, set the node who is supposed to say yes to 1, all others 0
+        else:
+            label = int(label)
+            self.targets[label] = 1
+        print(self.targets)
+        print(label)
+
         #calculate output layer error
         for num in self.outputIndexes:
-            self.error[num] = (label - self.output[num]) * self.f_prime(self.output[num])
+            self.error[num] = (self.targets[num] - self.output[num]) * self.f_prime(self.output[num])
             #calculate change in weights going into this output node
             for hid in self.hiddenIndexes:
                 self.delta[hid, num] = (self.learningRate * self.error[num] * self.output[hid]) + (self.momentum * self.delta[hid,num])
@@ -146,10 +162,16 @@ class NeuralNetLearner(SupervisedLearner):
         print("w_12=", self.weights[6,3], "\n")
 
     def train(self, features, labels):
-        self.learningRate = 0.175
-        self.momentum = 0.9
+        outputNodeCount = 0
+        #if the value count is 0, it's continuous, 1 output node
+        if labels.value_count(0) == 0:
+            outputNodeCount = 1
+        #else there are multiple classes, make that many output nodes
+        else:
+            outputNodeCount = labels.value_count(0)
+
         #Num output, hidden(including bias), input nodes(including bias)
-        self.createNetwork(1, 4, features.cols+1)
+        self.createNetwork(outputNodeCount, 4, features.cols+1)
 
         # add a bias column to features, make it 1
         inputs = np.ones((features.rows, features.cols + 1), dtype=float)
