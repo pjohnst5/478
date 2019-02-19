@@ -22,8 +22,8 @@ class NeuralNetLearner(SupervisedLearner):
         #the last int in nodes is the number of input nodes
         #everything in between is the number of nodes for that hidden layer
         #Learning rate and momentum
-        self.learningRate = 0.175
-        self.momentum = 0.9
+        self.learningRate = 0.175 #0.1
+        self.momentum = 0.9 #0
         #lets go
         NUM_TOTAL_NODES = sum(nodes)
         #array of arrays to store node indexes
@@ -43,21 +43,6 @@ class NeuralNetLearner(SupervisedLearner):
         #make delta matrix
         self.delta = np.random.uniform(low=-0.0, high=0.0, size=(NUM_TOTAL_NODES, NUM_TOTAL_NODES))
 
-        #set weights for example1
-        # self.weights[1,0] = -0.01
-        # self.weights[2,0] = 0.03
-        # self.weights[3,0] = 0.02
-        # self.weights[4,0] = 0.02
-        # self.weights[5,1] = -0.03
-        # self.weights[6,1] = 0.03
-        # self.weights[7,1] = -0.01
-        # self.weights[5,2] = 0.04
-        # self.weights[6,2] = -0.02
-        # self.weights[7,2] = 0.01
-        # self.weights[5,3] = 0.03
-        # self.weights[6,3] = 0.02
-        # self.weights[7,3] = -0.02
-
         #initialize output map
         self.output = {}
         #initialize error map
@@ -68,28 +53,33 @@ class NeuralNetLearner(SupervisedLearner):
             nodeID = hiddenLayers[i][-1]
             self.output[nodeID] = 1
 
-        # #set number of nodes
-        # NUM_OUTPUT_NODES = out
-        # NUM_HIDDEN_NODES = hid #(including bias node)
-        # NUM_INPUT_NODES = inp
-        # NUM_TOTAL_NODES = NUM_OUTPUT_NODES + NUM_HIDDEN_NODES + NUM_INPUT_NODES
-        #
-        # #make arrays to store node indexes and targets
-        # self.outputIndexes = []
-        # self.hiddenIndexes = []
-        # self.inputIndexes = []
-        # for i in range(NUM_OUTPUT_NODES):
-        #     self.outputIndexes.append(i)
-        # for i in range(NUM_OUTPUT_NODES, NUM_OUTPUT_NODES + NUM_HIDDEN_NODES):
-        #     self.hiddenIndexes.append(i)
-        # for i in range(NUM_OUTPUT_NODES + NUM_HIDDEN_NODES, NUM_TOTAL_NODES):
-        #     self.inputIndexes.append(i)
-        #
-        # #make weight matrix
-        # self.weights = np.random.uniform(low=-0.0, high=0.0, size=(NUM_TOTAL_NODES, NUM_TOTAL_NODES))
-        # #make delta matrix
-        # self.delta = np.random.uniform(low=-0.0, high=0.0, size=(NUM_TOTAL_NODES, NUM_TOTAL_NODES))
-        #
+        #set weights for example 2
+        # self.weights[10,6] = 0.1
+        # self.weights[9,6] = 0.2
+        # self.weights[8,6] = -0.1
+        # self.weights[10,5] = -0.2
+        # self.weights[9,5] = 0.3
+        # self.weights[8,5] = -0.3
+        # self.weights[7,3] = 0.1
+        # self.weights[6,3] = -0.2
+        # self.weights[5,3] = -0.3
+        # self.weights[7,2] = 0.2
+        # self.weights[6,2] = -0.1
+        # self.weights[5,2] = 0.3
+        # self.weights[4,1] = 0.2
+        # self.weights[3,1] = -0.1
+        # self.weights[2,1] = 0.3
+        # self.weights[4,0] = 0.1
+        # self.weights[3,0] = -0.2
+        # self.weights[2,0] = -0.3
+        # print("Weights:")
+        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
+        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
+        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
+        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
+        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
+        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
+
         # #set weights for example1
         # self.weights[1,0] = -0.01
         # self.weights[2,0] = 0.03
@@ -104,11 +94,7 @@ class NeuralNetLearner(SupervisedLearner):
         # self.weights[5,3] = 0.03
         # self.weights[6,3] = 0.02
         # self.weights[7,3] = -0.02
-        #
-        # #initialize output map
-        # self.output = {}
-        # #initialize error map
-        # self.error = {}
+
 
     def f_net(self, net):
         result = 1 / (1 + (math.exp(-net)))
@@ -127,9 +113,8 @@ class NeuralNetLearner(SupervisedLearner):
             self.output[inp] = input[tempIndex]
             tempIndex += 1
         self.output[self.nodeIndexes[-1][-1]] = 1
-        print(self.nodeIndexes)
 
-        #Calculate each layers output
+        #Calculate each layers output (starting with input layer)
         for layerIndex in reversed(range(len(self.nodeIndexes) - 1)):
             layerIds = []
             #if it's the output layer
@@ -148,7 +133,7 @@ class NeuralNetLearner(SupervisedLearner):
             outputOfBeforeLayer = []
             for i in layerBeforeItIds:
                 outputOfBeforeLayer.append(self.output[i])
-            print(layerIndex, layerIds, layerBeforeItIds, outputOfBeforeLayer)
+            #print(layerIndex, layerIds, layerBeforeItIds, outputOfBeforeLayer)
             #Calculate this layer's outputs
             for num in layerIds:
                 #get weights going into num
@@ -163,55 +148,19 @@ class NeuralNetLearner(SupervisedLearner):
         print("\n")
 
 
-
-
-
-
-
-
-        # #make hidden bias node always output 1
-        # self.output[self.hiddenIndexes[-1]] = 1
-        # #make input nodes have output of the input
-        # tempIndex = 0
-        # for inp in self.inputIndexes[:-1]:
-        #     self.output[inp] = input[tempIndex]
-        #     tempIndex += 1
-        # self.output[self.inputIndexes[-1]] = 1
-        #
-        # #Calculate hidden layer outputs (not including bias)
-        # for num in self.hiddenIndexes[:-1]:
-        #     #get weights going into num
-        #     weightsIntoNum = self.weights[self.inputIndexes, num]
-        #     #get the net for hidden node
-        #     net = np.dot(input, weightsIntoNum)
-        #     self.output[num] = self.f_net(net)
-        #
-        # #Calculate output layer outputs
-        # for num in self.outputIndexes:
-        #     #get weights going into num
-        #     weightsIntoNum = self.weights[self.hiddenIndexes, num]
-        #     #get output from hidden layer
-        #     hiddenLayerOutputs = []
-        #     for hiddenNum in self.hiddenIndexes:
-        #         hiddenLayerOutputs.append(self.output[hiddenNum])
-        #     #get the net for the output node
-        #     net = np.dot(hiddenLayerOutputs, weightsIntoNum)
-        #     self.output[num] = self.f_net(net)
-
-
     def backProp(self, label):
         #Set up target array
         self.targets = np.zeros(len(self.nodeIndexes[0]))
+        # self.targets[0] = 1
+        # self.targets[1] = 0.1
         #If it's continuous, keep the label as is
         if len(self.targets) == 1:
             self.targets[0] = label
         #if it's nominal, set the node who is supposed to say yes to 1, all others 0
         else:
             self.targets[int(label)] = 1
-        print(self.targets)
-        print(label)
 
-        #calculae each layer's error
+        #calculae each layer's error (starting with output layer)
         for layerIndex in range(len(self.nodeIndexes) - 1):
             #if it's the output layer
             if layerIndex == 0:
@@ -230,15 +179,19 @@ class NeuralNetLearner(SupervisedLearner):
             else:
                 #get the node id's for this layer (not including bias)
                 layerIds = self.nodeIndexes[layerIndex][:-1]
-                #get the node id's of the layer before it
+                #get the node id's of the layer before it (including bias)
                 layerBeforeItIds = self.nodeIndexes[layerIndex+1]
                 #get the node id's of the layer IN FRONT of it
-                layerAfterItIds = self.nodeIndexes[layerIndex-1]
+                layerAfterItIds = []
+                if layerIndex == 1:
+                    layerAfterItIds = self.nodeIndexes[layerIndex-1]
+                else:
+                    layerAfterItIds = self.nodeIndexes[layerIndex-1][:-1]
                 #caculate hidden layer error (not including bias)
-                for num in self.layerIds:
+                for num in layerIds:
                     #sum up errors of layer in front timessed by weight
                     sum = 0
-                    for aft in self.layerAfterItIds:
+                    for aft in layerAfterItIds:
                         next = self.error[aft] * self.weights[num, aft]
                         sum = sum + next
                     #times this sum by fprime
@@ -249,36 +202,19 @@ class NeuralNetLearner(SupervisedLearner):
         #update weights
         self.weights = self.weights + self.delta
 
+        for key in self.error:
+            print("e_", key, ": ", self.error[key])
+        print("\n")
+        #print weights for example 2
+        # print("Weights:")
+        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
+        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
+        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
+        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
+        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
+        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
 
-
-
-        # #calculate output layer error
-        # for num in self.outputIndexes:
-        #     self.error[num] = (self.targets[num] - self.output[num]) * self.f_prime(self.output[num])
-        #     #calculate change in weights going into this output node
-        #     for hid in self.hiddenIndexes:
-        #         self.delta[hid, num] = (self.learningRate * self.error[num] * self.output[hid]) + (self.momentum * self.delta[hid,num])
-        #
-        # #calculate hidden layer error (not including bias)
-        # for num in self.hiddenIndexes[:-1]:
-        #     #sum up errors of layer in front timesed by weight (output layer)
-        #     sum = 0
-        #     for out in self.outputIndexes:
-        #         next = self.error[out] * self.weights[num,out]
-        #         sum = sum + next
-        #     #times this sum by fprime
-        #     self.error[num] = sum * self.f_prime(self.output[num])
-        #     #calculate change in weights going into this hidden node
-        #     for inp in self.inputIndexes:
-        #         self.delta[inp, num] = (self.learningRate * self.error[num] * self.output[inp]) + (self.momentum * self.delta[inp,num])
-        #
-        # #update weights
-        # self.weights = self.weights + self.delta
-        #
-        # for key in self.error:
-        #     print("e_", key, ": ", self.error[key])
-        # print("\n")
-        #
+        #print weights for example 1
         # print("w_0=", self.weights[4,0])
         # print("w_1=", self.weights[1,0])
         # print("w_2=", self.weights[2,0])
@@ -293,6 +229,7 @@ class NeuralNetLearner(SupervisedLearner):
         # print("w_11=", self.weights[5,3])
         # print("w_12=", self.weights[6,3], "\n")
 
+
     def train(self, features, labels):
         outputNodeCount = 0
         #if the value count is 0, it's continuous, 1 output node
@@ -305,7 +242,7 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output, last is num of input
         #between are number of nodes for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, 4, 5, inputNodeCount])
+        self.createNetwork([2, 3, 3, inputNodeCount])
 
         # add a bias column to features, make it 1
         inputs = np.ones((features.rows, features.cols + 1), dtype=float)
@@ -321,7 +258,7 @@ class NeuralNetLearner(SupervisedLearner):
             self.forwardProp(singleInput)
             self.backProp(label)
 
-            if inputIndex == 0:
+            if inputIndex == 1:
                 done = True
             inputIndex += 1
 
