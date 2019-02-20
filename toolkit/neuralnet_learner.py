@@ -18,12 +18,9 @@ class NeuralNetLearner(SupervisedLearner):
         pass
 
     def createSets(self, features, labels, percent, vowel):
-        #features.shuffle(labels)
+        features.shuffle(labels)
         rowCountTrain = int(features.rows * (1-percent))
-        print("features")
-        features.print()
-        labels.print()
-        print(rowCountTrain, "\n")
+
         if vowel:
             self.trainFeatures = Matrix(features, 0, 3, rowCountTrain, features.cols - 3)
             self.validFeatures = Matrix(features, rowCountTrain, 3, features.rows-rowCountTrain, features.cols - 3)
@@ -33,28 +30,19 @@ class NeuralNetLearner(SupervisedLearner):
         self.trainLabels = Matrix(labels, 0, 0, rowCountTrain, labels.cols)
         self.validLables = Matrix(labels, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
 
-        print("\nTrain features")
-        self.trainFeatures.print()
-        self.trainLabels
-        print("\nValidation features")
-        self.validFeatures.print()
-        self.validLables.print()
-
-        # add a bias column to features, make it 1
+        # add a bias column to training features, make it 1
         self.trainInputs = np.ones((self.trainFeatures.rows, self.trainFeatures.cols + 1), dtype=float)
         self.trainInputs[:,:-1] = self.trainFeatures.data
-        print()
-        print(self.trainInputs)
+        # add a bias colunn to validation features, make it 1
+        self.validInputs = np.ones((self.validFeatures.rows, self.validFeatures.cols + 1), dtype=float)
+        self.validInputs[:,:-1] = self.validFeatures.data
 
-
-
+    #the first int in nodes is number of output nodes
+    #the last int in nodes is the number of input nodes
     def createNetwork(self, nodes):
-        #the first int in nodes is number of output nodes
-        #the last int in nodes is the number of input nodes
         #everything in between is the number of nodes for that hidden layer
-        #Learning rate and momentum
-        self.learningRate = 0.175 #0.1
-        self.momentum = 0.9 #0
+        self.learningRate = 0.1 #0.1
+        self.momentum = 0 #0
         #lets go
         NUM_TOTAL_NODES = sum(nodes)
         #array of arrays to store node indexes
@@ -84,6 +72,48 @@ class NeuralNetLearner(SupervisedLearner):
             nodeID = hiddenLayers[i][-1]
             self.output[nodeID] = 1
 
+        #set weights for example 2
+        # self.weights[10,6] = 0.1
+        # self.weights[9,6] = 0.2
+        # self.weights[8,6] = -0.1
+        # self.weights[10,5] = -0.2
+        # self.weights[9,5] = 0.3
+        # self.weights[8,5] = -0.3
+        # self.weights[7,3] = 0.1
+        # self.weights[6,3] = -0.2
+        # self.weights[5,3] = -0.3
+        # self.weights[7,2] = 0.2
+        # self.weights[6,2] = -0.1
+        # self.weights[5,2] = 0.3
+        # self.weights[4,1] = 0.2
+        # self.weights[3,1] = -0.1
+        # self.weights[2,1] = 0.3
+        # self.weights[4,0] = 0.1
+        # self.weights[3,0] = -0.2
+        # self.weights[2,0] = -0.3
+        # print("Weights:")
+        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
+        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
+        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
+        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
+        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
+        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
+
+        #set weights for example1
+        # self.weights[1,0] = -0.01
+        # self.weights[2,0] = 0.03
+        # self.weights[3,0] = 0.02
+        # self.weights[4,0] = 0.02
+        # self.weights[5,1] = -0.03
+        # self.weights[6,1] = 0.03
+        # self.weights[7,1] = -0.01
+        # self.weights[5,2] = 0.04
+        # self.weights[6,2] = -0.02
+        # self.weights[7,2] = 0.01
+        # self.weights[5,3] = 0.03
+        # self.weights[6,3] = 0.02
+        # self.weights[7,3] = -0.02
+
 
     def f_net(self, net):
         result = 1 / (1 + (math.exp(-net)))
@@ -94,8 +124,6 @@ class NeuralNetLearner(SupervisedLearner):
         return result
 
     def forwardProp(self, input):
-        print("\ninput\n", input, "\n")
-
         #make input nodes have output of the input
         tempIndex = 0
         for inp in self.nodeIndexes[-1][:-1]:
@@ -131,10 +159,10 @@ class NeuralNetLearner(SupervisedLearner):
                 net = np.dot(outputOfBeforeLayer, weightsIntoNum)
                 self.output[num] = self.f_net(net)
 
-
-        for key in self.output:
-            print("out_", key, ": ", self.output[key])
-        print("\n")
+        # print("\ninput\n", input, "\n")
+        # for key in self.output:
+        #     print("out_", key, ": ", self.output[key])
+        # print("\n")
 
 
     def backProp(self, label):
@@ -189,17 +217,45 @@ class NeuralNetLearner(SupervisedLearner):
         #update weights
         self.weights = self.weights + self.delta
 
-        for key in self.error:
-            print("e_", key, ": ", self.error[key])
-        print("\n")
+        # print("targets ", self.targets)
+        # for out in self.nodeIndexes[0]:
+        #     print("out ", out, ": ", self.output[out])
+
+        # for key in self.error:
+        #     print("e_", key, ": ", self.error[key])
+        # print("\n")
+
+        #print weights for example 2
+        # print("Weights:")
+        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
+        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
+        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
+        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
+        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
+        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
+
+        # #print weights for example 1
+        # print("w_0=", self.weights[4,0])
+        # print("w_1=", self.weights[1,0])
+        # print("w_2=", self.weights[2,0])
+        # print("w_3=", self.weights[3,0])
+        # print("w_4=", self.weights[7,1])
+        # print("w_5=", self.weights[5,1])
+        # print("w_6=", self.weights[6,1])
+        # print("w_7=", self.weights[7,2])
+        # print("w_8=", self.weights[5,2])
+        # print("w_9=", self.weights[6,2])
+        # print("w_10=", self.weights[7,3])
+        # print("w_11=", self.weights[5,3])
+        # print("w_12=", self.weights[6,3], "\n")
 
 
     def train(self, features, labels):
         #seperate out training, testing and validation sets
-        #third argument is percent for validation, last is vowel
-        self.createSets(features, labels, 0.20, True)
+        #third argument is percent for validation, last is if vowel dataset
+        self.createSets(features, labels, 0.2, False)
 
-        inputNodeCount = features.cols+1
+        inputNodeCount = self.trainFeatures.cols+1
         outputNodeCount = 0
         #if the value count is 0, it's continuous, 1 output node
         if labels.value_count(0) == 0:
@@ -210,10 +266,11 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output nodes, last is num of input nodes
         #numbers between are node counts for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, 3, 3, inputNodeCount])
+        self.createNetwork([outputNodeCount, ((inputNodeCount-1)*2)+1, inputNodeCount])
 
         done = False
         inputIndex = 0
+        totalEpochs = 0
 
         while not done:
             singleInput = self.trainInputs[inputIndex]
@@ -222,12 +279,58 @@ class NeuralNetLearner(SupervisedLearner):
             self.forwardProp(singleInput)
             self.backProp(label)
 
-            if inputIndex == 1:
-                done = True
             inputIndex += 1
 
-        pass
+            #If at the end of an epoch
+            if inputIndex == len(self.trainInputs):
+                inputIndex = 0
+                totalEpochs += 1
+                #shuffle training deck
+                self.trainFeatures.shuffle(self.trainLabels)
+                self.trainInputs[:,:-1] = self.trainFeatures.data
+                #shuffle validation deck
+                self.validFeatures.shuffle(self.validLables)
+                self.validInputs[:,:-1] = self.validFeatures.data
+
+            if totalEpochs == 500:
+                done = True
+
 
     def predict(self, features, labels):
+        del labels[:]
 
-        pass
+        #add a bias weight onto the input
+        features.append(1.0)
+
+        #run the input through the network
+        self.forwardProp(features)
+
+        #grab the output node indexes
+        outputNodeIndexes = self.nodeIndexes[0]
+        #make the best output index the first output node
+        bestOutputIndex = outputNodeIndexes[0]
+        prediction = 0
+
+        #if output class is continuous
+        if len(outputNodeIndexes) == 1:
+            prediction = self.output[bestOutputIndex]
+        #if the output class is nominal
+        else:
+            #find the output node index with the highest output
+            for out in outputNodeIndexes:
+                if self.output[out] > self.output[bestOutputIndex]:
+                    bestOutputIndex = out
+            prediction = bestOutputIndex
+
+        #put this prediction as the label
+        if len(labels) == 0:
+            labels.append(prediction)
+        else:
+            labels[0] = prediction
+
+        # print(features)
+        # for out in outputNodeIndexes:
+        #     print("out ", out, ": ", self.output[out])
+        # print("prediction: ", prediction)
+        # if prediction == 1:
+        #     print("------------------------------------------------- prediction: 1")
