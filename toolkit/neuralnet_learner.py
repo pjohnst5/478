@@ -28,7 +28,7 @@ class NeuralNetLearner(SupervisedLearner):
             self.trainFeatures = Matrix(features, 0, 0, rowCountTrain, features.cols)
             self.validFeatures = Matrix(features, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
         self.trainLabels = Matrix(labels, 0, 0, rowCountTrain, labels.cols)
-        self.validLables = Matrix(labels, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
+        self.validLabels = Matrix(labels, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
 
         # add a bias column to training features, make it 1
         self.trainInputs = np.ones((self.trainFeatures.rows, self.trainFeatures.cols + 1), dtype=float)
@@ -36,6 +36,7 @@ class NeuralNetLearner(SupervisedLearner):
         # add a bias colunn to validation features, make it 1
         self.validInputs = np.ones((self.validFeatures.rows, self.validFeatures.cols + 1), dtype=float)
         self.validInputs[:,:-1] = self.validFeatures.data
+
 
     #the first int in nodes is number of output nodes
     #the last int in nodes is the number of input nodes
@@ -72,48 +73,6 @@ class NeuralNetLearner(SupervisedLearner):
             nodeID = hiddenLayers[i][-1]
             self.output[nodeID] = 1
 
-        #set weights for example 2
-        # self.weights[10,6] = 0.1
-        # self.weights[9,6] = 0.2
-        # self.weights[8,6] = -0.1
-        # self.weights[10,5] = -0.2
-        # self.weights[9,5] = 0.3
-        # self.weights[8,5] = -0.3
-        # self.weights[7,3] = 0.1
-        # self.weights[6,3] = -0.2
-        # self.weights[5,3] = -0.3
-        # self.weights[7,2] = 0.2
-        # self.weights[6,2] = -0.1
-        # self.weights[5,2] = 0.3
-        # self.weights[4,1] = 0.2
-        # self.weights[3,1] = -0.1
-        # self.weights[2,1] = 0.3
-        # self.weights[4,0] = 0.1
-        # self.weights[3,0] = -0.2
-        # self.weights[2,0] = -0.3
-        # print("Weights:")
-        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
-        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
-        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
-        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
-        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
-        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
-
-        #set weights for example1
-        # self.weights[1,0] = -0.01
-        # self.weights[2,0] = 0.03
-        # self.weights[3,0] = 0.02
-        # self.weights[4,0] = 0.02
-        # self.weights[5,1] = -0.03
-        # self.weights[6,1] = 0.03
-        # self.weights[7,1] = -0.01
-        # self.weights[5,2] = 0.04
-        # self.weights[6,2] = -0.02
-        # self.weights[7,2] = 0.01
-        # self.weights[5,3] = 0.03
-        # self.weights[6,3] = 0.02
-        # self.weights[7,3] = -0.02
-
 
     def f_net(self, net):
         result = 1 / (1 + (math.exp(-net)))
@@ -122,6 +81,117 @@ class NeuralNetLearner(SupervisedLearner):
     def f_prime(self, net):
         result = net * (1 - net)
         return result
+
+    def shuffleDecks(self):
+        #shuffle training deck
+        self.trainFeatures.shuffle(self.trainLabels)
+        self.trainInputs[:,:-1] = self.trainFeatures.data
+        #shuffle validation deck
+        self.validFeatures.shuffle(self.validLabels)
+        self.validInputs[:,:-1] = self.validFeatures.data
+
+    def checkValidation(self):
+        sseValid = 0.0
+        mseValid = 0.0
+        classificatonAccuracyVS = 0.0
+        numCorrect = 0
+        numTotal = len(self.validInputs)
+        outputIndexes = self.nodeIndexes[0]
+
+        #for each validation input
+        for valIndex in range(len(self.validInputs)):
+            #get the validation input
+            valInput = self.validInputs[valIndex].tolist()
+            #get what the answer is supposed to be
+            label = int(self.validLabels.row(valIndex)[0])
+            #seng input through the network and also predict
+            labels = []
+            greatestOutputIndex = self.predict(valInput[:-1], labels)
+
+            #Set up target array
+            targets = np.zeros(len(outputIndexes))
+            #If it's continuous, keep the label as is
+            if len(targets) == 1:
+                targets[0] = label
+            #if it's nominal, set the node who is supposed to say yes to 1, all others 0
+            else:
+                targets[int(label)] = 1
+
+            #get all the outputs
+            outputs = []
+            for out in outputIndexes:
+                outputs.append(self.output[out])
+
+            #its a continuous response variable
+            if len(outputIndexes) == 1:
+                #check if the output was correct
+                if self.output[greatestOutputIndex] == label:
+                    numCorrect += 1
+            #if it's a nominal response variable
+            else:
+                #check if the output was correct
+                if greatestOutputIndex == label:
+                    numCorrect += 1
+
+            #get the difference list
+            differences = []
+            for out in outputIndexes:
+                differences.append(targets[out] - outputs[out])
+            #square the differences
+            differencesSquared = []
+            for diff in differences:
+                differencesSquared.append(diff**2)
+            #sum up the squared differences list
+            sseValid += sum(differencesSquared)
+
+        #calculate the %classified correctly
+        classificatonAccuracyVS = numCorrect / numTotal
+
+        #calculate MSE of validation set
+        mseValid = sseValid / numTotal
+        return mseValid, classificatonAccuracyVS
+
+    def trainingSSE(self, input, label):
+        outputIndexes = self.nodeIndexes[0]
+        #seng input through the network and also predict
+        labels = []
+        greatestOutputIndex = self.predict(input[:-1], labels)
+
+        #Set up target array
+        targets = np.zeros(len(outputIndexes))
+        #If it's continuous, keep the label as is
+        if len(targets) == 1:
+            targets[0] = label
+        #if it's nominal, set the node who is supposed to say yes to 1, all others 0
+        else:
+            targets[int(label)] = 1
+
+        #get all the outputs
+        outputs = []
+        for out in outputIndexes:
+            outputs.append(self.output[out])
+
+        #get the difference list
+        differences = []
+        for out in outputIndexes:
+            differences.append(targets[out] - outputs[out])
+        #square the differences
+        differencesSquared = []
+        for diff in differences:
+            differencesSquared.append(diff**2)
+        #sum up the squared differences list
+        sseIncrement = sum(differencesSquared)
+
+        # print("input: ", input)
+        # print("label: ", label)
+        # print("targets: ", targets)
+        # print("outputs: ", outputs)
+        # print("differences: ", differences)
+        # print("differences squared: ", differencesSquared)
+        # print("sse increment: ", sseIncrement)
+
+        return sseIncrement
+
 
     def forwardProp(self, input):
         #make input nodes have output of the input
@@ -158,11 +228,6 @@ class NeuralNetLearner(SupervisedLearner):
                 #get the net for hidden node
                 net = np.dot(outputOfBeforeLayer, weightsIntoNum)
                 self.output[num] = self.f_net(net)
-
-        # print("\ninput\n", input, "\n")
-        # for key in self.output:
-        #     print("out_", key, ": ", self.output[key])
-        # print("\n")
 
 
     def backProp(self, label):
@@ -217,37 +282,6 @@ class NeuralNetLearner(SupervisedLearner):
         #update weights
         self.weights = self.weights + self.delta
 
-        # print("targets ", self.targets)
-        # for out in self.nodeIndexes[0]:
-        #     print("out ", out, ": ", self.output[out])
-
-        # for key in self.error:
-        #     print("e_", key, ": ", self.error[key])
-        # print("\n")
-
-        #print weights for example 2
-        # print("Weights:")
-        # print(self.weights[10,6], self.weights[9,6], self.weights[8,6])
-        # print(self.weights[10,5], self.weights[9,5], self.weights[8,5])
-        # print(self.weights[7,3], self.weights[6,3], self.weights[5,3])
-        # print(self.weights[7,2], self.weights[6,2], self.weights[5,2])
-        # print(self.weights[4,1], self.weights[3,1], self.weights[2,1])
-        # print(self.weights[4,0], self.weights[3,0], self.weights[2,0])
-
-        # #print weights for example 1
-        # print("w_0=", self.weights[4,0])
-        # print("w_1=", self.weights[1,0])
-        # print("w_2=", self.weights[2,0])
-        # print("w_3=", self.weights[3,0])
-        # print("w_4=", self.weights[7,1])
-        # print("w_5=", self.weights[5,1])
-        # print("w_6=", self.weights[6,1])
-        # print("w_7=", self.weights[7,2])
-        # print("w_8=", self.weights[5,2])
-        # print("w_9=", self.weights[6,2])
-        # print("w_10=", self.weights[7,3])
-        # print("w_11=", self.weights[5,3])
-        # print("w_12=", self.weights[6,3], "\n")
 
 
     def train(self, features, labels):
@@ -271,12 +305,24 @@ class NeuralNetLearner(SupervisedLearner):
         done = False
         inputIndex = 0
         totalEpochs = 0
+        epochsNoProgress = 0
+        epochsNoProgressCap = 5
+        sseTrain = 0.0
+        mseTrain = 0.0
+        mseValid = 0.0
+        bssfMSE = float("inf")
+        epochsIndexes = []
+        mseTrains = []
+        mseValids = []
+        validationAccuracies = []
 
         while not done:
             singleInput = self.trainInputs[inputIndex]
             label = self.trainLabels.row(inputIndex)[0]
 
             self.forwardProp(singleInput)
+            sseIncrement = self.trainingSSE(singleInput.tolist(), label)
+            sseTrain += sseIncrement
             self.backProp(label)
 
             inputIndex += 1
@@ -285,15 +331,37 @@ class NeuralNetLearner(SupervisedLearner):
             if inputIndex == len(self.trainInputs):
                 inputIndex = 0
                 totalEpochs += 1
-                #shuffle training deck
-                self.trainFeatures.shuffle(self.trainLabels)
-                self.trainInputs[:,:-1] = self.trainFeatures.data
-                #shuffle validation deck
-                self.validFeatures.shuffle(self.validLables)
-                self.validInputs[:,:-1] = self.validFeatures.data
+                #shuffle training and validation decks
+                self.shuffleDecks()
 
-            if totalEpochs == 500:
-                done = True
+                #calculate training MSE
+                mseTrain = sseTrain / len(self.trainInputs)
+                #push it on the train MSEs
+                epochsIndexes.append(totalEpochs-1)
+                mseTrains.append(mseTrain)
+                mseTrain = 0.0
+                sseTrain = 0.0
+
+                #check validation set
+                mseValid, classificatonAccuracyVS = self.checkValidation()
+                mseValids.append(mseValid)
+                validationAccuracies.append(classificatonAccuracyVS)
+
+                #if this mseValid is better than the bssfMse
+                if mseValid < bssfMSE:
+                    epochsNoProgress = 0
+                    bssfMSE = mseValid
+                #if not, increment epochs with no progress
+                else:
+                    epochsNoProgress += 1
+
+                #if we've reached the cap of epochs with no progress
+                if epochsNoProgress == epochsNoProgressCap:
+                    done = True
+        print("epochsIndexes = ", epochsIndexes)
+        print("mseTrains = ", mseTrains)
+        print("mseValids = ", mseValids)
+        print("validationAccuracies = ", validationAccuracies)
 
 
     def predict(self, features, labels):
@@ -328,9 +396,4 @@ class NeuralNetLearner(SupervisedLearner):
         else:
             labels[0] = prediction
 
-        # print(features)
-        # for out in outputNodeIndexes:
-        #     print("out ", out, ": ", self.output[out])
-        # print("prediction: ", prediction)
-        # if prediction == 1:
-        #     print("------------------------------------------------- prediction: 1")
+        return bestOutputIndex
