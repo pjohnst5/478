@@ -274,11 +274,11 @@ class NeuralNetLearner(SupervisedLearner):
 
 
     def train(self, features, labels):
-        self.learningRate = 0.005
-        self.momentum = 0
+        self.learningRate = 0.085
+        self.momentum = 0.125
         #seperate out training, testing and validation sets
         #third argument is percent for validation, last is if vowel dataset
-        self.createSets(features, labels, 0.2, True)
+        self.createSets(features, labels, 0.2, False)
 
         inputNodeCount = self.trainFeatures.cols+1
         outputNodeCount = 0
@@ -291,7 +291,7 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output nodes, last is num of input nodes
         #numbers between are node counts for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, ((inputNodeCount-1)*2)+1, inputNodeCount])
+        self.createNetwork([outputNodeCount, 16, inputNodeCount])
 
         done = False
         inputIndex = 0
@@ -311,7 +311,6 @@ class NeuralNetLearner(SupervisedLearner):
             singleInput = self.trainInputs[inputIndex]
             label = self.trainLabels.row(inputIndex)[0]
 
-            #forward prop is called within trainingSSE
             sseIncrement = self.trainingSSE(singleInput.tolist(), label)
             sseTrain += sseIncrement
             self.backProp(label)
@@ -473,7 +472,7 @@ class NeuralNetLearner(SupervisedLearner):
                 #sum up the squared differences list
                 sseIncrement = sum(differencesSquared)
                 sse += sseIncrement
-
+#------------------------------------------------------------------
 
 
 
