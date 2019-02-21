@@ -41,9 +41,6 @@ class NeuralNetLearner(SupervisedLearner):
     #the first int in nodes is number of output nodes
     #the last int in nodes is the number of input nodes
     def createNetwork(self, nodes):
-        #everything in between is the number of nodes for that hidden layer
-        self.learningRate = 0.1 #0.1
-        self.momentum = 0 #0
         #lets go
         NUM_TOTAL_NODES = sum(nodes)
         #array of arrays to store node indexes
@@ -182,14 +179,6 @@ class NeuralNetLearner(SupervisedLearner):
         #sum up the squared differences list
         sseIncrement = sum(differencesSquared)
 
-        # print("input: ", input)
-        # print("label: ", label)
-        # print("targets: ", targets)
-        # print("outputs: ", outputs)
-        # print("differences: ", differences)
-        # print("differences squared: ", differencesSquared)
-        # print("sse increment: ", sseIncrement)
-
         return sseIncrement
 
 
@@ -285,9 +274,11 @@ class NeuralNetLearner(SupervisedLearner):
 
 
     def train(self, features, labels):
+        self.learningRate = 0.005
+        self.momentum = 0
         #seperate out training, testing and validation sets
         #third argument is percent for validation, last is if vowel dataset
-        self.createSets(features, labels, 0.2, False)
+        self.createSets(features, labels, 0.2, True)
 
         inputNodeCount = self.trainFeatures.cols+1
         outputNodeCount = 0
@@ -320,7 +311,7 @@ class NeuralNetLearner(SupervisedLearner):
             singleInput = self.trainInputs[inputIndex]
             label = self.trainLabels.row(inputIndex)[0]
 
-            self.forwardProp(singleInput)
+            #forward prop is called within trainingSSE
             sseIncrement = self.trainingSSE(singleInput.tolist(), label)
             sseTrain += sseIncrement
             self.backProp(label)
@@ -358,10 +349,13 @@ class NeuralNetLearner(SupervisedLearner):
                 #if we've reached the cap of epochs with no progress
                 if epochsNoProgress == epochsNoProgressCap:
                     done = True
-        print("epochsIndexes = ", epochsIndexes)
-        print("mseTrains = ", mseTrains)
-        print("mseValids = ", mseValids)
-        print("validationAccuracies = ", validationAccuracies)
+        # print("epochsIndexes = ", epochsIndexes)
+        # print("mseTrains = ", mseTrains)
+        # print("mseValids = ", mseValids)
+        # print("validationAccuracies = ", validationAccuracies)
+        print("Best VS MSE: ", bssfMSE)
+        print("Training MSE: " , mseTrains[-1])
+        print("total epochs: ", totalEpochs)
 
 
     def predict(self, features, labels):
@@ -397,3 +391,93 @@ class NeuralNetLearner(SupervisedLearner):
             labels[0] = prediction
 
         return bestOutputIndex
+
+
+    def accuracy_and_mse(self, features, labels, confusion=None):
+        mse = 0.0
+        sse = 0.0
+        outputs = []
+        targets = []
+        differences = []
+        differencesSquared = []
+
+        if features.rows != labels.rows:
+            raise Exception("Expected the features and labels to have the same number of rows")
+        if labels.cols != 1:
+            raise Exception("Sorry, this method currently only supports one-dimensional labels")
+        if features.rows == 0:
+            raise Exception("Expected at least one row")
+
+        label_values_count = labels.value_count(0)
+        if label_values_count == 0:
+            # label is continuous
+            pred = []
+            sse = 0.0
+            for i in range(features.rows):
+                feat = features.row(i)
+                targ = labels.row(i)
+                pred[0] = 0.0       # make sure the prediction is not biased by a previous prediction
+                self.predict(feat, pred)
+                delta = targ[0] - pred[0]
+                sse += delta**2
+            return math.sqrt(sse / features.rows)
+
+        else:
+            # label is nominal, so measure predictive accuracy
+            if confusion:
+                confusion.set_size(label_values_count, label_values_count)
+                confusion.attr_names = [labels.attr_value(0, i) for i in range(label_values_count)]
+
+            correct_count = 0
+            prediction = []
+            for i in range(features.rows):
+                feat = features.row(i)
+                targ = int(labels.get(i, 0))
+                if targ >= label_values_count:
+                    raise Exception("The label is out of range")
+                self.predict(feat, prediction)
+                pred = int(prediction[0])
+                #print("pred: ", pred, "\n")
+                if confusion:
+                    confusion.set(targ, pred, confusion.get(targ, pred)+1)
+
+
+    #----------------  calculate differences, differences squared --------------#
+                outputIndexes = self.nodeIndexes[0]
+                #send input through the network and also predict
+                labelz = []
+                greatestOutputIndex = self.predict(feat, labelz)
+
+                #Set up target array
+                targets = np.zeros(len(outputIndexes))
+                #If it's continuous, keep the label as is
+                if len(targets) == 1:
+                    targets[0] = targ
+                #if it's nominal, set the node who is supposed to say yes to 1, all others 0
+                else:
+                    targets[int(targ)] = 1
+
+                #get all the outputs
+                outputs = []
+                for out in outputIndexes:
+                    outputs.append(self.output[out])
+
+                #get the difference list
+                differences = []
+                for out in outputIndexes:
+                    differences.append(targets[out] - outputs[out])
+                #square the differences
+                differencesSquared = []
+                for diff in differences:
+                    differencesSquared.append(diff**2)
+                #sum up the squared differences list
+                sseIncrement = sum(differencesSquared)
+                sse += sseIncrement
+
+
+
+
+                if pred == targ:
+                    correct_count += 1
+                mse = sse / features.rows
+            return (correct_count / features.rows), mse

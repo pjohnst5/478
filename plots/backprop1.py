@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
-figure(figsize=(7,7))
 import numpy as np
 import pandas as pd
 
@@ -16,12 +15,12 @@ validationAccuracies =  [0.43478260869565216, 0.5652173913043478, 0.652173913043
 
 df=pd.DataFrame({'x': epochsIndexes, 'y1': mseTrains, 'y2': mseValids, 'y3': validationAccuracies })
 
-plt.title("MSE of Validation and Training Sets / Validation set accuracy")
+plt.title("MSE of Validation and Training Sets / Validation set accuracy", fontweight='bold')
 plt.xlabel("Epochs")
 plt.ylabel("MSE / Classification Accuracy")
 
-plt.plot( 'x', 'y1', data=df, marker='', markerfacecolor='blue', color='skyblue', linewidth=2, label="MSE of training set")
-plt.plot( 'x', 'y2', data=df, marker='', color='green', linewidth=2, label="MSE of validation set")
+plt.plot( 'x', 'y1', data=df, marker='', color='skyblue', linewidth=2, label="MSE of training set")
+plt.plot( 'x', 'y2', data=df, marker='', color='black', linewidth=2, label="MSE of validation set")
 plt.plot( 'x', 'y3', data=df, marker='', color='red', linewidth=2, label="Classification accuracy of VS")
 plt.legend()
 
