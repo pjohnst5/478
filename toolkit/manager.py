@@ -27,7 +27,7 @@ class MLSystemManager:
             "baseline": BaselineLearner(),
             "perceptron": PerceptronLearner(),
             "neuralnet": NeuralNetLearner(),
-            #"decisiontree": DecisionTreeLearner(),
+            "decisiontree": DecisionTreeLearner(),
             #"knn": InstanceBasedLearner()
         }
         if model in modelmap:
@@ -141,13 +141,13 @@ class MLSystemManager:
             print("Training set accuracy: {}".format(train_accuracy))
 
             confusion = Matrix()
+            test_accuracy = learner.measure_accuracy(test_features, test_labels, confusion)
             #changed this for backprop
-            #test_accuracy = learner.measure_accuracy(test_features, test_labels, confusion)
-            test_accuracy, mse = learner.accuracy_and_mse(test_features, test_labels, confusion)
+            # test_accuracy, mse = learner.accuracy_and_mse(test_features, test_labels, confusion)
 
             print("Test set accuracy: {}".format(test_accuracy))
-            #also added this line
-            print("Test set MSE: {}".format(mse))
+            # #also added this line
+            # print("Test set MSE: {}".format(mse))
 
             if print_confusion_matrix:
                 print("\nConfusion matrix: (Row=target value, Col=predicted value)")
