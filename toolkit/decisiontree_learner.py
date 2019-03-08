@@ -40,10 +40,16 @@ class Node():
         unique = np.unique(self.dataLabels)
         if len(unique) == 1:
             return False
-        if len(unique) == 0:
-            print("Hey something is wrong with canGoFurther, there shouldn't be a node with 0 output classes")
-            return False
         return True
+
+    def majorityClass(self):
+        unique, counts = np.unique(self.dataLabels, return_counts=True)
+        maxIndexes = np.argmax(counts)
+        if isinstance(maxIndexes, np.int64):
+            return unique[maxIndexes]
+        return unique[maxIndexes[0]]
+
+
 
     def __str__(self):
         string = "\nNode ID: "
@@ -181,23 +187,36 @@ class DecisionTreeLearner(SupervisedLearner):
         return
 
     def train(self, features, labels):
-        root = Node()
-        root.nodeID = self.nodeID
+        self.root = Node()
+        self.root.nodeID = self.nodeID
         self.nodeID += 1
-        root.dataFeat = np.array(features.data)
-        root.dataLabels = np.array(labels.data)
-        root.allOutputClasses = np.unique(labels.data)
-        root.remainingAttrs = np.arange(len(features.data[0]))
-        root.depth = 0
+        self.root.dataFeat = np.array(features.data)
+        self.root.dataLabels = np.array(labels.data)
+        self.root.allOutputClasses = np.unique(labels.data)
+        self.root.remainingAttrs = np.arange(len(features.data[0]))
+        self.root.depth = 0
 
         if self.debug:
-            print(root)
-        self.exploreNode(root)
+            print(self.root)
+        self.exploreNode(self.root)
 
+    def predictDescent(self, node, features):
+        #if leaf node, return the majority class
+        if node.isLeafNode():
+            return node.majorityClass()
+
+        #otherwise, descend down the correct child
+        attrChildren = 0
+        for child in node.children:
+            attrChildren = child.connectingAttr
+            break
+
+        featureAttrVal = features[attrChildren]
+        for child in node.children:
+            if child.connectingVal == featureAttrVal:
+                return self.predictDescent(child, features)
 
     def predict(self, features, labels):
         del labels[:]
-
-        print(features)
-
-        pass
+        prediction = self.predictDescent(self.root, features)
+        labels.append(prediction)
