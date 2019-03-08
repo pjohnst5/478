@@ -165,6 +165,7 @@ class MLSystemManager:
             print("Number of folds: {}".format(folds))
             reps = 1
             sum_accuracy = 0.0
+            sum_train_accuracy = 0.0
             elapsed_time = 0.0
             for j in range(reps):
                 data.shuffle()
@@ -185,13 +186,16 @@ class MLSystemManager:
                     learner.train(train_features, train_labels)
                     elapsed_time += time.time() - start_time
 
+                    train_accuracy = learner.measure_accuracy(train_features, train_labels)
                     accuracy = learner.measure_accuracy(test_features, test_labels)
                     sum_accuracy += accuracy
-                    print("Rep={}, Fold={}, Accuracy={}".format(j, i, accuracy))
+                    sum_train_accuracy += train_accuracy
+                    print("Rep={}, Fold={}, TrainAccuracy={}, TestAccuracy={}".format(j, i, train_accuracy, accuracy))
 
             elapsed_time /= (reps * folds)
             print("Average time to train (in seconds): {}".format(elapsed_time))
-            print("Mean accuracy={}".format(sum_accuracy / (reps * folds)))
+            print("Mean train accuracy={}".format(sum_train_accuracy / (reps * folds)))
+            print("Mean test accuracy={}".format(sum_accuracy / (reps * folds)))
 
         else:
             raise Exception("Unrecognized evaluation method '{}'".format(eval_method))

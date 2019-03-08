@@ -1,0 +1,8783 @@
+
+Dataset name: datasets/cars.arff
+Number of instances: 1728
+Number of attributes: 7
+Learning algorithm: decisiontree
+Evaluation method: training
+
+Calculating accuracy on training set...
+
+Node ID: 0
+Num Children: 0
+Num remaining instances: 1728
+Remaining attrs: 0 1 2 3 4 5 
+Connecting attr: None
+Connecting val: None
+Depth: 0
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1210) (1.0, 384) (2.0, 69) (3.0, 65) 
+Can go further: True
+Base Info: 1.2057409700121753
+
+attr:  0
+baseInfo:  1.2057409700121753
+attrInfo:  1.1092920008425613
+infoGain:  0.09644896916961399 
+
+attr:  1
+baseInfo:  1.2057409700121753
+attrInfo:  1.1320370230906893
+infoGain:  0.07370394692148596 
+
+attr:  2
+baseInfo:  1.2057409700121753
+attrInfo:  1.2012552533855432
+infoGain:  0.004485716626632108 
+
+attr:  3
+baseInfo:  1.2057409700121753
+attrInfo:  0.9860780066722671
+infoGain:  0.2196629633399082 
+
+attr:  4
+baseInfo:  1.2057409700121753
+attrInfo:  1.1757328287645699
+infoGain:  0.030008141247605424 
+
+attr:  5
+baseInfo:  1.2057409700121753
+attrInfo:  0.9435566134579114
+infoGain:  0.26218435655426386 
+
+best attr:  5
+best attr infoGain:  0.26218435655426386 
+
+After split:
+
+Node ID: 0
+Num Children: 3
+Num remaining instances: 1728
+Remaining attrs: 0 1 2 3 4 5 
+Connecting attr: None
+Connecting val: None
+Depth: 0
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1210) (1.0, 384) (2.0, 69) (3.0, 65) 
+Can go further: True
+Base Info: 1.2057409700121753
+
+
+Node ID: 3
+Num Children: 0
+Num remaining instances: 576
+Remaining attrs: 0 1 2 3 4 
+Connecting attr: 5
+Connecting val: 2.0
+Depth: 1
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 277) (1.0, 204) (2.0, 30) (3.0, 65) 
+Can go further: True
+Base Info: 1.6155118495796124
+
+
+Node ID: 2
+Num Children: 0
+Num remaining instances: 576
+Remaining attrs: 0 1 2 3 4 
+Connecting attr: 5
+Connecting val: 1.0
+Depth: 1
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 357) (1.0, 180) (2.0, 39) 
+Can go further: True
+Base Info: 1.2151579907941221
+
+
+Node ID: 1
+Num Children: 0
+Num remaining instances: 576
+Remaining attrs: 0 1 2 3 4 
+Connecting attr: 5
+Connecting val: 0.0
+Depth: 1
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 576) 
+Can go further: False
+Base Info: 0.0
+
+attr:  0
+baseInfo:  1.6155118495796124
+attrInfo:  1.399963927967585
+infoGain:  0.2155479216120273 
+
+attr:  1
+baseInfo:  1.6155118495796124
+attrInfo:  1.4771705345141113
+infoGain:  0.13834131506550107 
+
+attr:  2
+baseInfo:  1.6155118495796124
+attrInfo:  1.6052371815912712
+infoGain:  0.010274667988341202 
+
+attr:  3
+baseInfo:  1.6155118495796124
+attrInfo:  1.1196066737231338
+infoGain:  0.49590517585647853 
+
+attr:  4
+baseInfo:  1.6155118495796124
+attrInfo:  1.506524190926732
+infoGain:  0.1089876586528804 
+
+best attr:  3
+best attr infoGain:  0.49590517585647853 
+
+After split:
+
+Node ID: 3
+Num Children: 3
+Num remaining instances: 576
+Remaining attrs: 0 1 2 3 4 
+Connecting attr: 5
+Connecting val: 2.0
+Depth: 1
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 277) (1.0, 204) (2.0, 30) (3.0, 65) 
+Can go further: True
+Base Info: 1.6155118495796124
+
+
+Node ID: 6
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 2.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 49) (1.0, 96) (2.0, 12) (3.0, 35) 
+Can go further: True
+Base Info: 1.7004748026346777
+
+
+Node ID: 4
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 0.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 192) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 5
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 1.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 36) (1.0, 108) (2.0, 18) (3.0, 30) 
+Can go further: True
+Base Info: 1.6583452185347238
+
+attr:  0
+baseInfo:  1.7004748026346777
+attrInfo:  1.3154639614107277
+infoGain:  0.3850108412239499 
+
+attr:  1
+baseInfo:  1.7004748026346777
+attrInfo:  1.4406392171732907
+infoGain:  0.25983558546138696 
+
+attr:  2
+baseInfo:  1.7004748026346777
+attrInfo:  1.649152854785524
+infoGain:  0.05132194784915356 
+
+attr:  4
+baseInfo:  1.7004748026346777
+attrInfo:  1.517489101148634
+infoGain:  0.18298570148604365 
+
+best attr:  0
+best attr infoGain:  0.3850108412239499 
+
+After split:
+
+Node ID: 6
+Num Children: 4
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 2.0
+Depth: 2
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 49) (1.0, 96) (2.0, 12) (3.0, 35) 
+Can go further: True
+Base Info: 1.7004748026346777
+
+
+Node ID: 8
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 15) (1.0, 33) 
+Can go further: True
+Base Info: 0.8960382325345575
+
+
+Node ID: 9
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 26) (2.0, 4) (3.0, 14) 
+Can go further: True
+Base Info: 1.5950791344612636
+
+
+Node ID: 7
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 26) (1.0, 22) 
+Can go further: True
+Base Info: 0.9949848281859701
+
+
+Node ID: 10
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 15) (2.0, 8) (3.0, 21) 
+Can go further: True
+Base Info: 1.77575365046112
+
+attr:  1
+baseInfo:  0.8960382325345575
+attrInfo:  0.3103626377277253
+infoGain:  0.5856755948068322 
+
+attr:  2
+baseInfo:  0.8960382325345575
+attrInfo:  0.8584585933443497
+infoGain:  0.03757963919020779 
+
+attr:  4
+baseInfo:  0.8960382325345575
+attrInfo:  0.8704185524022544
+infoGain:  0.02561968013230309 
+
+best attr:  1
+best attr infoGain:  0.5856755948068322 
+
+After split:
+
+Node ID: 8
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 15) (1.0, 33) 
+Can go further: True
+Base Info: 0.8960382325345575
+
+
+Node ID: 13
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 11
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 14
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 12
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 13
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 16
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 18
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 15
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 17
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 15
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 20
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 21
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 19
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 14
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 23
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 22
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 25
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 24
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 22
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 26
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 28
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 27
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 12
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 31
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 29
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 30
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 32
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 29
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 34
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 35
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 33
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.5950791344612636
+attrInfo:  0.8472444899122603
+infoGain:  0.7478346445490033 
+
+attr:  2
+baseInfo:  1.5950791344612636
+attrInfo:  1.4065438791035207
+infoGain:  0.18853525535774285 
+
+attr:  4
+baseInfo:  1.5950791344612636
+attrInfo:  1.2224309889072493
+infoGain:  0.37264814555401427 
+
+best attr:  1
+best attr infoGain:  0.7478346445490033 
+
+After split:
+
+Node ID: 9
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 26) (2.0, 4) (3.0, 14) 
+Can go further: True
+Base Info: 1.5950791344612636
+
+
+Node ID: 39
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 37
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 36
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 38
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 39
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 42
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 41
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 40
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 41
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 45
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 43
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 44
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 46
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 40
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 48
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 47
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 50
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 49
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 37
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 53
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 52
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 54
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 51
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 51
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 56
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 57
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 55
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 36
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 58
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 60
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 59
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 61
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 58
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 62
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 63
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 64
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 38
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 65
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 66
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 67
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 65
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 71
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 69
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 70
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 68
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 66
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 74
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 72
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 75
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 73
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.9949848281859701
+attrInfo:  0.20690842515181687
+infoGain:  0.7880764030341533 
+
+attr:  2
+baseInfo:  0.9949848281859701
+attrInfo:  0.9795739585136224
+infoGain:  0.015410869672347727 
+
+attr:  4
+baseInfo:  0.9949848281859701
+attrInfo:  0.9848113343083216
+infoGain:  0.010173493877648543 
+
+best attr:  1
+best attr infoGain:  0.7880764030341533 
+
+After split:
+
+Node ID: 7
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 26) (1.0, 22) 
+Can go further: True
+Base Info: 0.9949848281859701
+
+
+Node ID: 78
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 77
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 79
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 76
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 78
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 82
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 80
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 83
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 81
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 80
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 84
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 86
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 85
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 79
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 89
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 88
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 90
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 87
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 87
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 92
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 93
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 91
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.77575365046112
+attrInfo:  1.0639583097165737
+infoGain:  0.7117953407445463 
+
+attr:  2
+baseInfo:  1.77575365046112
+attrInfo:  1.5841479170272448
+infoGain:  0.1916057334338752 
+
+attr:  4
+baseInfo:  1.77575365046112
+attrInfo:  1.2462903019848879
+infoGain:  0.5294633484762321 
+
+best attr:  1
+best attr infoGain:  0.7117953407445463 
+
+After split:
+
+Node ID: 10
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 15) (2.0, 8) (3.0, 21) 
+Can go further: True
+Base Info: 1.77575365046112
+
+
+Node ID: 97
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 95
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 96
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 94
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 97
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 99
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 100
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 98
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 99
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 102
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 101
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 103
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 104
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 98
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 107
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 105
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 108
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 106
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 95
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 111
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 110
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 109
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 110
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 115
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 113
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 114
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 112
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 109
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 116
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 118
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 119
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 117
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 96
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 4) (3.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 122
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 120
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 121
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 120
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 125
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 126
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 123
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 124
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 121
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) (3.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 130
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 128
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 129
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 127
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 94
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 133
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 131
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 134
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 132
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 131
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 137
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 136
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 135
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  0
+baseInfo:  1.6583452185347238
+attrInfo:  1.167837797403416
+infoGain:  0.49050742113130785 
+
+attr:  1
+baseInfo:  1.6583452185347238
+attrInfo:  1.2743974703476992
+infoGain:  0.3839477481870246 
+
+attr:  2
+baseInfo:  1.6583452185347238
+attrInfo:  1.6373624544186167
+infoGain:  0.02098276411610711 
+
+attr:  4
+baseInfo:  1.6583452185347238
+attrInfo:  1.4883320743073905
+infoGain:  0.17001314422733338 
+
+best attr:  0
+best attr infoGain:  0.49050742113130785 
+
+After split:
+
+Node ID: 5
+Num Children: 4
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 1.0
+Depth: 2
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 36) (1.0, 108) (2.0, 18) (3.0, 30) 
+Can go further: True
+Base Info: 1.6583452185347238
+
+
+Node ID: 138
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 24) (1.0, 24) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 140
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 30) (2.0, 6) (3.0, 12) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+
+Node ID: 139
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 36) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 141
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 18) (2.0, 12) (3.0, 18) 
+Can go further: True
+Base Info: 1.5612781244591325
+
+attr:  1
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  1.0
+infoGain:  0.0 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  1.0
+infoGain:  0.0 
+
+best attr:  1
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 138
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 24) (1.0, 24) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 144
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 145
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 143
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 142
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.2987949406953985
+attrInfo:  0.5
+infoGain:  0.7987949406953985 
+
+attr:  2
+baseInfo:  1.2987949406953985
+attrInfo:  1.2661506484543548
+infoGain:  0.032644292241043704 
+
+attr:  4
+baseInfo:  1.2987949406953985
+attrInfo:  1.036691021718177
+infoGain:  0.2621039189772214 
+
+best attr:  1
+best attr infoGain:  0.7987949406953985 
+
+After split:
+
+Node ID: 140
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 30) (2.0, 6) (3.0, 12) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+
+Node ID: 146
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 147
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 148
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 149
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 148
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 152
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 151
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 150
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 151
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 154
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 153
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 155
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 156
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 149
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 159
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 157
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 158
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 158
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 163
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 162
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 160
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 161
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.8112781244591328
+infoGain:  0.0 
+
+attr:  4
+baseInfo:  0.8112781244591328
+attrInfo:  0.8112781244591328
+infoGain:  0.0 
+
+best attr:  1
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 139
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 36) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 165
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 167
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 164
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 166
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.5612781244591325
+attrInfo:  0.75
+infoGain:  0.8112781244591325 
+
+attr:  2
+baseInfo:  1.5612781244591325
+attrInfo:  1.5068665431825221
+infoGain:  0.05441158127661039 
+
+attr:  4
+baseInfo:  1.5612781244591325
+attrInfo:  1.1241854163060885
+infoGain:  0.437092708153044 
+
+best attr:  1
+best attr infoGain:  0.8112781244591325 
+
+After split:
+
+Node ID: 141
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 18) (2.0, 12) (3.0, 18) 
+Can go further: True
+Base Info: 1.5612781244591325
+
+
+Node ID: 170
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 171
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 169
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 168
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 170
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 172
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 173
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 174
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 173
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 175
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 178
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 177
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 176
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 171
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 180
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 179
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 181
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 180
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 184
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 183
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 182
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 185
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 169
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (3.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 188
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 186
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 187
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 187
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (3.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 192
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 189
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 190
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 191
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (3.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  0
+baseInfo:  1.2151579907941221
+attrInfo:  1.090950150244663
+infoGain:  0.1242078405494591 
+
+attr:  1
+baseInfo:  1.2151579907941221
+attrInfo:  1.1047053542971428
+infoGain:  0.11045263649697934 
+
+attr:  2
+baseInfo:  1.2151579907941221
+attrInfo:  1.203367752020602
+infoGain:  0.011790238773520034 
+
+attr:  3
+baseInfo:  1.2151579907941221
+attrInfo:  0.9137364813996467
+infoGain:  0.30142150939447543 
+
+attr:  4
+baseInfo:  1.2151579907941221
+attrInfo:  1.1240515436571505
+infoGain:  0.09110644713697158 
+
+best attr:  3
+best attr infoGain:  0.30142150939447543 
+
+After split:
+
+Node ID: 2
+Num Children: 3
+Num remaining instances: 576
+Remaining attrs: 0 1 2 3 4 
+Connecting attr: 5
+Connecting val: 1.0
+Depth: 1
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 357) (1.0, 180) (2.0, 39) 
+Can go further: True
+Base Info: 1.2151579907941221
+
+
+Node ID: 195
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 2.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 81) (1.0, 90) (2.0, 21) 
+Can go further: True
+Base Info: 1.3868724237332433
+
+
+Node ID: 194
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 1.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 84) (1.0, 90) (2.0, 18) 
+Can go further: True
+Base Info: 1.3543370204656968
+
+
+Node ID: 193
+Num Children: 0
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 0.0
+Depth: 2
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 192) 
+Can go further: False
+Base Info: 0.0
+
+attr:  0
+baseInfo:  1.3868724237332433
+attrInfo:  1.158065527542421
+infoGain:  0.22880689619082228 
+
+attr:  1
+baseInfo:  1.3868724237332433
+attrInfo:  1.1870586825220157
+infoGain:  0.19981374121122752 
+
+attr:  2
+baseInfo:  1.3868724237332433
+attrInfo:  1.3461911025211601
+infoGain:  0.04068132121208312 
+
+attr:  4
+baseInfo:  1.3868724237332433
+attrInfo:  1.1711814707688695
+infoGain:  0.2156909529643738 
+
+best attr:  0
+best attr infoGain:  0.22880689619082228 
+
+After split:
+
+Node ID: 195
+Num Children: 4
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 2.0
+Depth: 2
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 81) (1.0, 90) (2.0, 21) 
+Can go further: True
+Base Info: 1.3868724237332433
+
+
+Node ID: 197
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 27) (1.0, 21) 
+Can go further: True
+Base Info: 0.9886994082884974
+
+
+Node ID: 196
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 34) (1.0, 14) 
+Can go further: True
+Base Info: 0.8708644692353646
+
+
+Node ID: 198
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 29) (2.0, 7) 
+Can go further: True
+Base Info: 1.3442857648512252
+
+
+Node ID: 199
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 8) (1.0, 26) (2.0, 14) 
+Can go further: True
+Base Info: 1.4284124677945966
+
+attr:  1
+baseInfo:  0.9886994082884974
+attrInfo:  0.7349015674883645
+infoGain:  0.2537978408001329 
+
+attr:  2
+baseInfo:  0.9886994082884974
+attrInfo:  0.9528195311147832
+infoGain:  0.035879877173714214 
+
+attr:  4
+baseInfo:  0.9886994082884974
+attrInfo:  0.5999925109158768
+infoGain:  0.38870689737262065 
+
+best attr:  4
+best attr infoGain:  0.38870689737262065 
+
+After split:
+
+Node ID: 197
+Num Children: 3
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 27) (1.0, 21) 
+Can go further: True
+Base Info: 0.9886994082884974
+
+
+Node ID: 201
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 7) (1.0, 9) 
+Can go further: True
+Base Info: 0.9886994082884974
+
+
+Node ID: 200
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 16) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 202
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  1
+baseInfo:  0.9886994082884974
+attrInfo:  0.6084585933443496
+infoGain:  0.38024081494414785 
+
+attr:  2
+baseInfo:  0.9886994082884974
+attrInfo:  0.6084585933443496
+infoGain:  0.38024081494414785 
+
+best attr:  1
+best attr infoGain:  0.38024081494414785 
+
+After split:
+
+Node ID: 201
+Num Children: 4
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 7) (1.0, 9) 
+Can go further: True
+Base Info: 0.9886994082884974
+
+
+Node ID: 206
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 205
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 203
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 204
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 206
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 210
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 208
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 209
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 207
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 205
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 213
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 211
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 212
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 214
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 204
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 215
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 217
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 216
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 218
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.8112781244591328
+infoGain:  0.0 
+
+best attr:  1
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 202
+Num Children: 4
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 220
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 221
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 222
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 219
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8708644692353646
+attrInfo:  0.48993437832557635
+infoGain:  0.3809300909097883 
+
+attr:  2
+baseInfo:  0.8708644692353646
+attrInfo:  0.8512274809529558
+infoGain:  0.019636988282408896 
+
+attr:  4
+baseInfo:  0.8708644692353646
+attrInfo:  0.6514780009749883
+infoGain:  0.21938646826037633 
+
+best attr:  1
+best attr infoGain:  0.3809300909097883 
+
+After split:
+
+Node ID: 196
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 34) (1.0, 14) 
+Can go further: True
+Base Info: 0.8708644692353646
+
+
+Node ID: 226
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 224
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 223
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 225
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+attr:  2
+baseInfo:  0.9798687566511527
+attrInfo:  0.9182958340544896
+infoGain:  0.06157292259666314 
+
+attr:  4
+baseInfo:  0.9798687566511527
+attrInfo:  0.2704260414863776
+infoGain:  0.7094427151647751 
+
+best attr:  4
+best attr infoGain:  0.7094427151647751 
+
+After split:
+
+Node ID: 226
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 228
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 227
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 229
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 228
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 230
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 231
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 232
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 233
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.9798687566511527
+attrInfo:  0.9182958340544896
+infoGain:  0.06157292259666314 
+
+attr:  4
+baseInfo:  0.9798687566511527
+attrInfo:  0.2704260414863776
+infoGain:  0.7094427151647751 
+
+best attr:  4
+best attr infoGain:  0.7094427151647751 
+
+After split:
+
+Node ID: 225
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 234
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 235
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 236
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 235
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 239
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 240
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 238
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 237
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.3442857648512252
+attrInfo:  0.9135566232817065
+infoGain:  0.4307291415695187 
+
+attr:  2
+baseInfo:  1.3442857648512252
+attrInfo:  1.2699746782469115
+infoGain:  0.07431108660431374 
+
+attr:  4
+baseInfo:  1.3442857648512252
+attrInfo:  0.9883908068952464
+infoGain:  0.3558949579559788 
+
+best attr:  1
+best attr infoGain:  0.4307291415695187 
+
+After split:
+
+Node ID: 198
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 29) (2.0, 7) 
+Can go further: True
+Base Info: 1.3442857648512252
+
+
+Node ID: 241
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 244
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 242
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 243
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+attr:  2
+baseInfo:  0.9798687566511527
+attrInfo:  0.9182958340544896
+infoGain:  0.06157292259666314 
+
+attr:  4
+baseInfo:  0.9798687566511527
+attrInfo:  0.2704260414863776
+infoGain:  0.7094427151647751 
+
+best attr:  4
+best attr infoGain:  0.7094427151647751 
+
+After split:
+
+Node ID: 241
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 245
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 247
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 246
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 246
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 250
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 248
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 251
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 249
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 244
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 254
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 253
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 252
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 253
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 255
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 258
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 257
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 256
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 252
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 261
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 260
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 259
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 262
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.9798687566511527
+attrInfo:  0.9182958340544896
+infoGain:  0.06157292259666314 
+
+attr:  4
+baseInfo:  0.9798687566511527
+attrInfo:  0.2704260414863776
+infoGain:  0.7094427151647751 
+
+best attr:  4
+best attr infoGain:  0.7094427151647751 
+
+After split:
+
+Node ID: 242
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 263
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 265
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 264
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 264
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 268
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 266
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 269
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 267
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 243
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 271
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 273
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 272
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 270
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 270
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 274
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 276
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 275
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.4284124677945966
+attrInfo:  0.9887574664991401
+infoGain:  0.43965500129545654 
+
+attr:  2
+baseInfo:  1.4284124677945966
+attrInfo:  1.331343035886087
+infoGain:  0.0970694319085097 
+
+attr:  4
+baseInfo:  1.4284124677945966
+attrInfo:  1.0787518857355876
+infoGain:  0.3496605820590091 
+
+best attr:  1
+best attr infoGain:  0.43965500129545654 
+
+After split:
+
+Node ID: 199
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 8) (1.0, 26) (2.0, 14) 
+Can go further: True
+Base Info: 1.4284124677945966
+
+
+Node ID: 280
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 278
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 277
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 279
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 280
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 282
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 283
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 281
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 282
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 287
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 285
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 286
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 284
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 281
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 290
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 288
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 291
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 289
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.41381685030363374
+attrInfo:  0.2295739585136224
+infoGain:  0.18424289179001135 
+
+attr:  4
+baseInfo:  0.41381685030363374
+attrInfo:  0.2704260414863776
+infoGain:  0.14339080881725613 
+
+best attr:  2
+best attr infoGain:  0.18424289179001135 
+
+After split:
+
+Node ID: 278
+Num Children: 4
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 11) 
+Can go further: True
+Base Info: 0.41381685030363374
+
+
+Node ID: 292
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 295
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 294
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 293
+Num Children: 0
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 3) 
+Can go further: False
+Base Info: 0.0
+
+attr:  4
+baseInfo:  0.9182958340544896
+attrInfo:  0.0
+infoGain:  0.9182958340544896 
+
+best attr:  4
+best attr infoGain:  0.9182958340544896 
+
+After split:
+
+Node ID: 292
+Num Children: 3
+Num remaining instances: 3
+Remaining attrs: 4 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 2) 
+Can go further: True
+Base Info: 0.9182958340544896
+
+
+Node ID: 296
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 298
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 297
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.9798687566511527
+attrInfo:  0.9182958340544896
+infoGain:  0.06157292259666314 
+
+attr:  4
+baseInfo:  0.9798687566511527
+attrInfo:  0.2704260414863776
+infoGain:  0.7094427151647751 
+
+best attr:  4
+best attr infoGain:  0.7094427151647751 
+
+After split:
+
+Node ID: 277
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 5) (1.0, 7) 
+Can go further: True
+Base Info: 0.9798687566511527
+
+
+Node ID: 300
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 301
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 299
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 300
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 305
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 304
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 302
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 303
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.280672129520887
+attrInfo:  1.084962500721156
+infoGain:  0.19570962879973086 
+
+attr:  4
+baseInfo:  1.280672129520887
+attrInfo:  0.5408520829727552
+infoGain:  0.7398200465481317 
+
+best attr:  4
+best attr infoGain:  0.7398200465481317 
+
+After split:
+
+Node ID: 279
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 4) (2.0, 7) 
+Can go further: True
+Base Info: 1.280672129520887
+
+
+Node ID: 307
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 308
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 306
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 307
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) (2.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 312
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 309
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 311
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 310
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  2
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 306
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 314
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 315
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 313
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 316
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  0
+baseInfo:  1.3543370204656968
+attrInfo:  1.0908255021937237
+infoGain:  0.26351151827197317 
+
+attr:  1
+baseInfo:  1.3543370204656968
+attrInfo:  1.1525182662886329
+infoGain:  0.20181875417706396 
+
+attr:  2
+baseInfo:  1.3543370204656968
+attrInfo:  1.3309739361979307
+infoGain:  0.02336308426776612 
+
+attr:  4
+baseInfo:  1.3543370204656968
+attrInfo:  1.1932697519750732
+infoGain:  0.16106726849062358 
+
+best attr:  0
+best attr infoGain:  0.26351151827197317 
+
+After split:
+
+Node ID: 194
+Num Children: 4
+Num remaining instances: 192
+Remaining attrs: 0 1 2 4 
+Connecting attr: 3
+Connecting val: 1.0
+Depth: 2
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 84) (1.0, 90) (2.0, 18) 
+Can go further: True
+Base Info: 1.3543370204656968
+
+
+Node ID: 317
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 36) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 320
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 30) (2.0, 12) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+
+Node ID: 318
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 30) (1.0, 18) 
+Can go further: True
+Base Info: 0.9544340029249649
+
+
+Node ID: 319
+Num Children: 0
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 30) (2.0, 6) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.5
+infoGain:  0.31127812445913283 
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.7841591278514218
+infoGain:  0.027118996607711 
+
+attr:  4
+baseInfo:  0.8112781244591328
+attrInfo:  0.603759374819711
+infoGain:  0.20751874963942185 
+
+best attr:  1
+best attr infoGain:  0.31127812445913283 
+
+After split:
+
+Node ID: 317
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 0.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 36) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 321
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 322
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 323
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 324
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 323
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 326
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 325
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 327
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 326
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 330
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 331
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 328
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 329
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 324
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 333
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 334
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 332
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 333
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 336
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 338
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 335
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 337
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.2987949406953985
+attrInfo:  0.75
+infoGain:  0.5487949406953985 
+
+attr:  2
+baseInfo:  1.2987949406953985
+attrInfo:  1.2661506484543548
+infoGain:  0.032644292241043704 
+
+attr:  4
+baseInfo:  1.2987949406953985
+attrInfo:  1.036691021718177
+infoGain:  0.2621039189772214 
+
+best attr:  1
+best attr infoGain:  0.5487949406953985 
+
+After split:
+
+Node ID: 320
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 3.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 30) (2.0, 12) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+
+Node ID: 340
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 342
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 341
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 339
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 342
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 345
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 344
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 343
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 344
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 349
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 346
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 347
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 348
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 341
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 351
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 352
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 350
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 351
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 353
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 355
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 354
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 356
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 339
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 358
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 357
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 359
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 358
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 360
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 362
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 363
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 361
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.9544340029249649
+attrInfo:  0.75
+infoGain:  0.20443400292496494 
+
+attr:  2
+baseInfo:  0.9544340029249649
+attrInfo:  0.9056390622295665
+infoGain:  0.04879494069539847 
+
+attr:  4
+baseInfo:  0.9544340029249649
+attrInfo:  0.5885707091280326
+infoGain:  0.3658632937969324 
+
+best attr:  4
+best attr infoGain:  0.3658632937969324 
+
+After split:
+
+Node ID: 318
+Num Children: 3
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 1.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 30) (1.0, 18) 
+Can go further: True
+Base Info: 0.9544340029249649
+
+
+Node ID: 366
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 365
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 10) (1.0, 6) 
+Can go further: True
+Base Info: 0.9544340029249649
+
+
+Node ID: 364
+Num Children: 0
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 16) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+attr:  2
+baseInfo:  0.8112781244591328
+attrInfo:  0.8112781244591328
+infoGain:  0.0 
+
+best attr:  1
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 366
+Num Children: 4
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) (1.0, 12) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 369
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 368
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 370
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 367
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.9544340029249649
+attrInfo:  0.75
+infoGain:  0.20443400292496494 
+
+attr:  2
+baseInfo:  0.9544340029249649
+attrInfo:  0.4056390622295664
+infoGain:  0.5487949406953985 
+
+best attr:  2
+best attr infoGain:  0.5487949406953985 
+
+After split:
+
+Node ID: 365
+Num Children: 4
+Num remaining instances: 16
+Remaining attrs: 1 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 10) (1.0, 6) 
+Can go further: True
+Base Info: 0.9544340029249649
+
+
+Node ID: 374
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 373
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 371
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 372
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  1
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 374
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 378
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 376
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 375
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 377
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  0.8112781244591328
+attrInfo:  0.0
+infoGain:  0.8112781244591328 
+
+best attr:  1
+best attr infoGain:  0.8112781244591328 
+
+After split:
+
+Node ID: 373
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 1 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) (1.0, 3) 
+Can go further: True
+Base Info: 0.8112781244591328
+
+
+Node ID: 382
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 380
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 381
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 379
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  1
+baseInfo:  1.2987949406953985
+attrInfo:  0.75
+infoGain:  0.5487949406953985 
+
+attr:  2
+baseInfo:  1.2987949406953985
+attrInfo:  1.266150648454355
+infoGain:  0.03264429224104348 
+
+attr:  4
+baseInfo:  1.2987949406953985
+attrInfo:  1.036691021718177
+infoGain:  0.2621039189772214 
+
+best attr:  1
+best attr infoGain:  0.5487949406953985 
+
+After split:
+
+Node ID: 319
+Num Children: 4
+Num remaining instances: 48
+Remaining attrs: 1 2 4 
+Connecting attr: 0
+Connecting val: 2.0
+Depth: 3
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 12) (1.0, 30) (2.0, 6) 
+Can go further: True
+Base Info: 1.2987949406953985
+
+
+Node ID: 383
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 384
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 386
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 385
+Num Children: 0
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 2.0
+Depth: 4
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 12) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 383
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 0.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 388
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 387
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 389
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 388
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 393
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 392
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 391
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 390
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 384
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 1.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 6) (1.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 395
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 394
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 396
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 395
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 2) (1.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 398
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 399
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 397
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (0.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 400
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.9182958340544896
+infoGain:  0.08170416594551044 
+
+attr:  4
+baseInfo:  1.0
+attrInfo:  0.3333333333333333
+infoGain:  0.6666666666666667 
+
+best attr:  4
+best attr infoGain:  0.6666666666666667 
+
+After split:
+
+Node ID: 386
+Num Children: 3
+Num remaining instances: 12
+Remaining attrs: 2 4 
+Connecting attr: 1
+Connecting val: 3.0
+Depth: 4
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 6) (2.0, 6) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 402
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 401
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 0.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 403
+Num Children: 0
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 2.0
+Depth: 5
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 4) 
+Can go further: False
+Base Info: 0.0
+
+attr:  2
+baseInfo:  1.0
+attrInfo:  0.0
+infoGain:  1.0 
+
+best attr:  2
+best attr infoGain:  1.0 
+
+After split:
+
+Node ID: 402
+Num Children: 4
+Num remaining instances: 4
+Remaining attrs: 2 
+Connecting attr: 4
+Connecting val: 1.0
+Depth: 5
+Is Leaf Node: False
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 2) (2.0, 2) 
+Can go further: True
+Base Info: 1.0
+
+
+Node ID: 405
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 1.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 407
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 3.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 404
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 0.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (1.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+
+Node ID: 406
+Num Children: 0
+Num remaining instances: 1
+Remaining attrs: 
+Connecting attr: 2
+Connecting val: 2.0
+Depth: 6
+Is Leaf Node: True
+All output classes: 0.0  1.0  2.0  3.0  
+Output class, count : (2.0, 1) 
+Can go further: False
+Base Info: 0.0
+
+Time to train (in seconds): 0.06982159614562988
+Training set accuracy: 1.0

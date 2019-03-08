@@ -27,7 +27,6 @@ class Node():
     def baseInfo(self):
         numRemainingInstances = len(self.dataFeat)
         outClasses, counts = np.unique(self.dataLabels, return_counts=True)
-
         baseInfo = 0
         for count in counts:
             ratio = (count/numRemainingInstances)
@@ -47,9 +46,7 @@ class Node():
         maxIndexes = np.argmax(counts)
         if isinstance(maxIndexes, np.int64):
             return unique[maxIndexes]
-        return unique[maxIndexes[0]]
-
-
+        return unqiue[maxIndexes[0]]
 
     def __str__(self):
         string = "\nNode ID: "
@@ -102,7 +99,59 @@ class DecisionTreeLearner(SupervisedLearner):
     def __init__(self):
         self.debug = False
         self.nodeID = 0
+        self.greatestDepth = 0
+        self.nodesTakenOut = 0
+        self.newGreatestDepth = 0
         pass
+
+    def printTree(self, node):
+        print(node)
+        for child in node.children:
+            print(child)
+
+    def calculateDepth(self, node):
+        if node.depth > self.newGreatestDepth:
+            self.newGreatestDepth = node.depth
+        for child in node.children:
+            self.calculateDepth(child)
+
+    def prune(self, node):
+        if node.isLeafNode():
+            return
+
+        for child in node.children:
+            self.prune(child)
+
+        mseBefore = self.calculateMSE()
+        temp = set(node.children)
+        node.children = set()
+        mseAfter = self.calculateMSE()
+
+        if mseAfter > mseBefore:
+            node.children = temp
+        else:
+            self.nodesTakenOut += len(temp)
+
+
+    def calculateMSE(self):
+        pred = []
+        sse = 0.0
+        for i in range(self.validFeatures.rows):
+            feat = self.validFeatures.row(i)
+            targ = self.validLabels.row(i)
+            self.predict(feat, pred)
+            delta = targ[0] - pred[0]
+            sse += delta**2
+        return sse / self.validFeatures.rows
+
+    def createSets(self, features, labels, percent):
+        features.shuffle(labels)
+        rowCountTrain = int(features.rows * (1-percent))
+        self.trainFeatures = Matrix(features, 0, 0, rowCountTrain, features.cols)
+        self.validFeatures = Matrix(features, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
+        self.trainLabels = Matrix(labels, 0, 0, rowCountTrain, labels.cols)
+        self.validLabels = Matrix(labels, rowCountTrain, 0, features.rows-rowCountTrain, features.cols)
+
 
     def splitNodeOnAttr(self, node, attr):
         attrColFeat = node.dataFeat[:,attr]
@@ -123,6 +172,8 @@ class DecisionTreeLearner(SupervisedLearner):
             child.connectingAttr = attr
             child.connectingVal = uniqueVal
             child.depth = node.depth + 1
+            if child.depth > self.greatestDepth:
+                self.greatestDepth = child.depth
 
             #add this new node as a child of first one
             node.children.add(child)
@@ -187,11 +238,14 @@ class DecisionTreeLearner(SupervisedLearner):
         return
 
     def train(self, features, labels):
+        #seperate out validation set
+        self.createSets(features, labels, 0.2)
+
         self.root = Node()
         self.root.nodeID = self.nodeID
         self.nodeID += 1
-        self.root.dataFeat = np.array(features.data)
-        self.root.dataLabels = np.array(labels.data)
+        self.root.dataFeat = np.array(self.trainFeatures.data)
+        self.root.dataLabels = np.array(self.trainLabels.data)
         self.root.allOutputClasses = np.unique(labels.data)
         self.root.remainingAttrs = np.arange(len(features.data[0]))
         self.root.depth = 0
@@ -200,21 +254,32 @@ class DecisionTreeLearner(SupervisedLearner):
             print(self.root)
         self.exploreNode(self.root)
 
+        #calculate mse before pruning
+        mseBefore = self.calculateMSE()
+        print("\nNum nodes before: ", self.nodeID)
+        print("Depth before: ", self.greatestDepth)
+        print("Mse before: ", mseBefore)
+        #prune
+        self.prune(self.root)
+        self.calculateDepth(self.root)
+        #calculate mse after pruning
+        mseAfter = self.calculateMSE()
+        print("\nMse after: ", mseAfter)
+        print("Num nodes after: ", self.nodeID - self.nodesTakenOut)
+        print("Depth after: ", self.newGreatestDepth, "\n")
+
     def predictDescent(self, node, features):
         #if leaf node, return the majority class
         if node.isLeafNode():
             return node.majorityClass()
 
         #otherwise, descend down the correct child
-        attrChildren = 0
         for child in node.children:
-            attrChildren = child.connectingAttr
-            break
-
-        featureAttrVal = features[attrChildren]
-        for child in node.children:
-            if child.connectingVal == featureAttrVal:
+            if child.connectingVal == features[child.connectingAttr]:
                 return self.predictDescent(child, features)
+        #if it gets out here, it means none of the children had this next attribute
+        #that means it's the majority class of node
+        return node.majorityClass()
 
     def predict(self, features, labels):
         del labels[:]
