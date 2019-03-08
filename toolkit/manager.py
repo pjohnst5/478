@@ -4,6 +4,7 @@ from .supervised_learner import SupervisedLearner
 from .baseline_learner import BaselineLearner
 from .perceptron_learner import PerceptronLearner
 from .neuralnet_learner import NeuralNetLearner
+from .decisiontree_learner import DecisionTreeLearner
 from .matrix import Matrix
 import random
 import argparse
