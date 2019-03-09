@@ -5,6 +5,7 @@ from .matrix import Matrix
 
 import numpy as np
 from math import log
+import random as rand
 
 class Node():
     def __init__(self):
@@ -223,6 +224,7 @@ class DecisionTreeLearner(SupervisedLearner):
                 bestAttr = attr
 
         #Split on best attribute
+        bestAttr = rand.choice(node.remainingAttrs)
         self.splitNodeOnAttr(node, bestAttr)
 
         if self.debug:
@@ -264,9 +266,9 @@ class DecisionTreeLearner(SupervisedLearner):
         self.calculateDepth(self.root)
         #calculate mse after pruning
         mseAfter = self.calculateMSE()
-        print("\nMse after: ", mseAfter)
-        print("Num nodes after: ", self.nodeID - self.nodesTakenOut)
-        print("Depth after: ", self.newGreatestDepth, "\n")
+        print("\nNum nodes after: ", self.nodeID - self.nodesTakenOut)
+        print("Depth after: ", self.newGreatestDepth)
+        print("Mse after: ", mseAfter, "\n")
 
     def predictDescent(self, node, features):
         #if leaf node, return the majority class
