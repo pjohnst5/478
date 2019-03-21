@@ -31,17 +31,18 @@ class InstanceBasedLearner(SupervisedLearner):
     def findNeighbors(self, k, input):
         inputNP = np.array(input)
         difference = inputNP - self.features.data
-        self.printMatrix(self.features.data, "Features")
-        print("input")
-        print(input)
 
-        self.printMatrix(difference, "difference")
+        # self.printMatrix(self.features.data, "Features")
+        # print("input")
+        # print(input)
+        # self.printMatrix(difference, "difference")
 
-        #if hey is inf, -inf, or nan there was a unknown
+        #if difference is inf, -inf, or nan there was a unknown
         difference = np.where(difference == float("inf"), 1, difference)
         difference = np.where(difference == -float("inf"), 1, difference)
         difference = np.where(np.isnan(difference), 1, difference)
-        self.printMatrix(difference, "difference after taking out unknowns")
+
+        # self.printMatrix(difference, "difference after taking out unknowns")
 
         #fix all nominal columns
         for j in range(self.features.cols):
@@ -49,60 +50,73 @@ class InstanceBasedLearner(SupervisedLearner):
             if self.features.value_count(j) != 0:
                 difference[:, j] = np.where(difference[:, j] != 0, 1, 0)
 
-        self.printMatrix(difference, "difference after fixing nominal")
+        # self.printMatrix(difference, "difference after fixing nominal")
 
         #find the euclidean distance for each difference array
         distances = np.linalg.norm(difference, axis=-1)
-        print("distances")
-        print(distances)
+        indices = np.argpartition(distances, k)[:k]
 
+        indexToDist = {}
+        indexToLabel = {}
+        for i in indices:
+            if distances[i] == 0:
+                indexToDist[i] = 1e-10
+            else:
+                indexToDist[i] = distances[i]
+            indexToLabel[i] = self.labels.data[i][0]
 
+        # print("distances")
+        # print(distances)
+        # print("indices")
+        # print(indices)
+        # print("index to dist")
+        # print(indexToDist)
+        # print("index to label")
+        # print(indexToLabel)
+        return indexToDist, indexToLabel
 
-        # for i in range(self.features.rows):
-        #     #deep copies input
-        #     inputc = input[:]
-        #     #deep copies the data row
-        #     datac = self.features.data[i][:]
-        #
-        #     for j in range(self.features.cols):
-        #         #if you know both attributes (neither is inf)
-        #         if inputc[j] != float("inf") and datac[j] != float("inf"):
-        #             #if this attriute is nominal
-        #             if self.features.value_count(j) != 0:
-        #                 #if both attributes are the same
-        #                 if datac[j] == inputc[j]:
-        #                     inputc[j] = 0
-        #                     datac[j] = 0
-        #                 else:
-        #                     inputc[j] = 0
-        #                     datac[j] = 1
-        #         #you don't know one or both
-        #         else:
-        #             inputc[j] = 0
-        #             datac[j] = 1
-        #
-        #     #now find euclidean distance between inputc and datac
+    def kNearPred(self, k, input):
+        _, indexToLabel = self.findNeighbors(k, input)
+        counts = np.zeros((self.labels.value_count(0), ), dtype=int)
 
+        for key in indexToLabel:
+            counts[int(indexToLabel[key])] += 1
 
+        prediction = np.argmax(counts)
+        return prediction
 
+    def kNearWeightPred(self, k, input):
+        indexToDist, indexToLabel = self.findNeighbors(k, input)
+        counts = np.zeros((self.labels.value_count(0), ), dtype=float)
 
+        for key in indexToDist:
+            invDistSq = 1 / (indexToDist[key]**2)
+            try:
+                counts[int(indexToLabel[key])] += invDistSq
+            except OverflowError:
+                counts[int(indexToLabel[key])] = float("inf")
+        prediction = np.argmax(counts)
+        return prediction
 
+    def kNearRegPred(self, k, input):
+        _, indexToLabel = self.findNeighbors(k, input)
+        mean = 0
+        for key in indexToLabel:
+            mean += indexToLabel[key]
+        mean = mean / len(indexToLabel)
+        return mean
 
+    def kNearRegWeightPred(self, k, input):
+        indexToDist, indexToLabel = self.findNeighbors(k, input)
+        top = 0
+        bottom = 0
 
-        pass
+        for key in indexToDist:
+            top += (indexToLabel[key] / (indexToDist[key]**2))
+            bottom += (1 / (indexToDist[key]**2))
 
-    def kNearPred(self, k):
-
-        pass
-
-    def kNearWeightPred(self, k):
-        pass
-
-    def kNearRegPred(self, k):
-        pass
-
-    def kNearRegWeightPred(self, k):
-        pass
+        prediction = top/bottom
+        return prediction
 
     def train(self, features, labels):
         self.features = features
@@ -110,21 +124,18 @@ class InstanceBasedLearner(SupervisedLearner):
 
     def predict(self, features, labels):
         REG = False
-        WEIGHTED = False
-        K = 3
+        WEIGHTED = True
+        K = 15
         prediction = None
 
-        self.findNeighbors(K, features)
-
         if not REG and not WEIGHTED:
-            prediction = self.kNearPred(K)
+            prediction = self.kNearPred(K, features)
         elif not REG and WEIGHTED:
-            prediction = self.kNearWeightPred(K)
+            prediction = self.kNearWeightPred(K, features)
         elif REG and not WEIGHTED:
-            prediction = self.kNearRegPred(K)
+            prediction = self.kNearRegPred(K, features)
         elif REG and WEIGHTED:
-            prediction = self.kNearRegWeightPred(K)
+            prediction = self.kNearRegWeightPred(K, features)
 
         del labels[:]
-        prediction = 0
         labels.append(prediction)

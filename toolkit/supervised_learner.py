@@ -31,7 +31,7 @@ class SupervisedLearner:
         """
         The model must be trained before you call this method. If the label is nominal,
         it returns the predictive accuracy. If the label is continuous, it returns
-        the root mean squared error (RMSE). If confusion is non-NULL, and the
+        the mean squared error (MSE). If confusion is non-NULL, and the
         output label is nominal, then confusion will hold stats for a confusion matrix.
         :type features: Matrix
         :type labels: Matrix
@@ -54,11 +54,11 @@ class SupervisedLearner:
             for i in range(features.rows):
                 feat = features.row(i)
                 targ = labels.row(i)
-                pred[0] = 0.0       # make sure the prediction is not biased by a previous prediction
+                #pred[0] = 0.0       # make sure the prediction is not biased by a previous prediction
                 self.predict(feat, pred)
                 delta = targ[0] - pred[0]
                 sse += delta**2
-            return math.sqrt(sse / features.rows)
+            return sse / features.rows
 
         else:
             # label is nominal, so measure predictive accuracy

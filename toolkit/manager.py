@@ -85,11 +85,11 @@ class MLSystemManager:
                 print("")
 
         elif eval_method == "static":
-
             print("Calculating accuracy on separate test set...")
 
             test_data = Matrix(arff=eval_parameter)
             if normalize:
+                print("normalizing")
                 test_data.normalize()
 
             print("Test set name: {}".format(eval_parameter))
@@ -108,6 +108,7 @@ class MLSystemManager:
             test_features = Matrix(test_data, 0, 0, test_data.rows, test_data.cols-1)
             test_labels = Matrix(test_data, 0, test_data.cols-1, test_data.rows, 1)
             confusion = Matrix()
+
             test_accuracy = learner.measure_accuracy(test_features, test_labels, confusion)
             print("Test set accuracy: {}".format(test_accuracy))
 
