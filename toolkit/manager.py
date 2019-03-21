@@ -107,9 +107,9 @@ class MLSystemManager:
 
             test_features = Matrix(test_data, 0, 0, test_data.rows, test_data.cols-1)
             test_labels = Matrix(test_data, 0, test_data.cols-1, test_data.rows, 1)
-            confusion = Matrix()
+            #confusion = Matrix()
 
-            test_accuracy = learner.measure_accuracy(test_features, test_labels, confusion)
+            test_accuracy = learner.measure_accuracy(test_features, test_labels, None)
             print("Test set accuracy: {}".format(test_accuracy))
 
             if print_confusion_matrix:

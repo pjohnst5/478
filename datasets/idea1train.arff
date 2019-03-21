@@ -9,7 +9,7 @@
 @ATTRIBUTE whip	Continuous
 @ATTRIBUTE pb	Continuous
 @ATTRIBUTE fpct	Continuous
-@ATTRIBUTE won 	{0,1}
+@ATTRIBUTE won 	Continuous
 
 @DATA
 0,0.659,0.272,0.705,2.57,1.12,26,0.961,1

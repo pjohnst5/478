@@ -1,13 +1,14 @@
 from __future__ import (absolute_import, division, print_function, unicode_literals)
 
 from .supervised_learner import SupervisedLearner
+from .group_learner import GroupLearner
 from .matrix import Matrix
 
 import numpy as np
 np.seterr(invalid='ignore')
 
 
-class InstanceBasedLearner(SupervisedLearner):
+class InstanceBasedLearner(GroupLearner):
     """
     This is the nearest neighbor Learner
     """
@@ -123,7 +124,7 @@ class InstanceBasedLearner(SupervisedLearner):
         self.labels = labels
 
     def predict(self, features, labels):
-        REG = False
+        REG = True
         WEIGHTED = True
         K = 15
         prediction = None
