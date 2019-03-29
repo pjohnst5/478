@@ -41,11 +41,12 @@ class GroupLearner:
             #first we need to see which of the two instances has 1 as the label
             team0Label = labels.data[i][0]
             team1Label = labels.data[i+1][0]
-            print(team1Label, team0Label, "labels")
-            print("features: ")
-            print(features.row(i))
-            print(features.row(i+1))
 
+            if team0Label == team1Label:
+                raise Exception("Teams have same label")
+
+            if team0Label != 1 and team1Label != 1:
+                raise Exception("Neither team has 1 as their label in measure accuracy")
 
             #find which won this world series
             winningTeam = None
@@ -53,8 +54,6 @@ class GroupLearner:
                 winningTeam = 0
             elif team1Label == 1:
                 winningTeam = 1
-            else:
-                raise Exception("Neither team has 1 as their label in measure accuracy")
 
             #now predict on these two teams
             feat0 = features.row(i)
@@ -75,4 +74,12 @@ class GroupLearner:
             if winningTeam == predictedWinningTeam:
                 correctCount += 1
 
-        return correctCount / features.rows
+            # print("feature 0: ", feat0)
+            # print("feature 1 : ", feat1)
+            # print("team0 prediction: ", predictionTeam0)
+            # print("team1 prediction: ", predictionTeam1)
+            # print("Actual winning team: ", winningTeam)
+            # print("predicted winning team: ", predictedWinningTeam)
+            # print("correct count: " , correctCount)
+
+        return correctCount / (features.rows/2)

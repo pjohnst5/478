@@ -164,6 +164,7 @@ class PerceptronLearner(SupervisedLearner):
             print(errors)
             print()
             print(epochs)
+        print(self.weights)
 
         pass
 

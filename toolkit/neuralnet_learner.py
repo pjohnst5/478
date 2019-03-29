@@ -274,7 +274,7 @@ class NeuralNetLearner(SupervisedLearner):
 
 
     def train(self, features, labels):
-        self.learningRate = 0.3
+        self.learningRate = 0.1
         self.momentum = 0.9
         #seperate out training, testing and validation sets
         #third argument is percent for validation, last is if vowel dataset
@@ -291,13 +291,13 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output nodes, last is num of input nodes
         #numbers between are node counts for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, (inputNodeCount*2) + 1, inputNodeCount])
+        self.createNetwork([outputNodeCount, 64, inputNodeCount])
 
         done = False
         inputIndex = 0
         totalEpochs = 0
         epochsNoProgress = 0
-        epochsNoProgressCap = 5
+        epochsNoProgressCap = 15
         sseTrain = 0.0
         mseTrain = 0.0
         mseValid = 0.0

@@ -1,5 +1,4 @@
-
-@RELATION idea1
+@RELATION idea1train
 
 @ATTRIBUTE league	{0,1}
 @ATTRIBUTE winpercentage 	Continuous

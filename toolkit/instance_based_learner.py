@@ -126,7 +126,7 @@ class InstanceBasedLearner(GroupLearner):
     def predict(self, features, labels):
         REG = True
         WEIGHTED = True
-        K = 15
+        K = 11
         prediction = None
 
         if not REG and not WEIGHTED:
