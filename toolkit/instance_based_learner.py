@@ -33,11 +33,6 @@ class InstanceBasedLearner(GroupLearner):
         inputNP = np.array(input)
         difference = inputNP - self.features.data
 
-        # self.printMatrix(self.features.data, "Features")
-        # print("input")
-        # print(input)
-        # self.printMatrix(difference, "difference")
-
         #if difference is inf, -inf, or nan there was a unknown
         difference = np.where(difference == float("inf"), 1, difference)
         difference = np.where(difference == -float("inf"), 1, difference)

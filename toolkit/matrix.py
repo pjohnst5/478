@@ -239,8 +239,8 @@ class Matrix:
     def normalize(self):
         """Normalize each column of continuous values"""
         for i in range(self.cols):
-            #added the and i !- self.cols-1 to not normalize the labels
-            if self.value_count(i) == 0 and i != self.cols-1:     # is continuous
+            #took out the and i != self.cols-1 to normalize all columns
+            if self.value_count(i) == 0:     # is continuous
                 min_val = self.column_min(i)
                 max_val = self.column_max(i)
                 for j in range(self.rows):
@@ -256,7 +256,7 @@ class Matrix:
                 print(" CONTINUOUS")
             else:
                 print(" {{{}}}".format(", ".join(self.enum_to_str[i].values())))
-
+        
         print("@DATA")
         for i in range(self.rows):
             r = self.row(i)

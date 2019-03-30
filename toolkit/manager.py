@@ -6,6 +6,7 @@ from .perceptron_learner import PerceptronLearner
 from .neuralnet_learner import NeuralNetLearner
 from .decisiontree_learner import DecisionTreeLearner
 from .instance_based_learner import InstanceBasedLearner
+from .cluster_learner import ClusterLearner
 from .matrix import Matrix
 import random
 import argparse
@@ -30,7 +31,8 @@ class MLSystemManager:
             "perceptron": PerceptronLearner(),
             "neuralnet": NeuralNetLearner(),
             "decisiontree": DecisionTreeLearner(),
-            "knn": InstanceBasedLearner()
+            "knn": InstanceBasedLearner(),
+            "cluster": ClusterLearner()
         }
         if model in modelmap:
             return modelmap[model]
@@ -199,6 +201,33 @@ class MLSystemManager:
             print("Mean train accuracy={}".format(sum_train_accuracy / (reps * folds)))
             print("Mean test accuracy={}".format(sum_accuracy / (reps * folds)))
 
+        #Added this training method for clustering
+        elif eval_method == "clustering":
+            useOutputLabel = False
+            useFirstColumn = False
+            randomKs = False
+            k = 5
+
+            instances = None
+            if useOutputLabel and useFirstColumn:
+                print("Using output label, using first column\n")
+                instances = Matrix(data, 0, 0, data.rows, data.cols)
+            elif (not useOutputLabel) and useFirstColumn:
+                print("Not using output label, using first column\n")
+                instances = Matrix(data, 0, 0, data.rows, data.cols-1)
+            elif (not useOutputLabel) and (not useFirstColumn):
+                print("Not using output label, not using first column\n")
+                instances = Matrix(data, 0, 1, data.rows, data.cols-2)
+            else:
+                raise Exception("Why would you use the output label but not the first column??")
+
+            #make the clusters
+            learner.makeClusters(instances, k, randomKs)
+
+            #calculate sses
+
+
+
         else:
             raise Exception("Unrecognized evaluation method '{}'".format(eval_method))
 
@@ -208,7 +237,7 @@ class MLSystemManager:
         parser.add_argument('-V', '--verbose', action='store_true', help='Print the confusion matrix and learner accuracy on individual class values')
         parser.add_argument('-N', '--normalize', action='store_true', help='Use normalized data')
         parser.add_argument('-R', '--seed', help="Random seed") # will give a string
-        parser.add_argument('-L', required=True, choices=['baseline', 'perceptron', 'neuralnet', 'decisiontree', 'knn'], help='Learning Algorithm')
+        parser.add_argument('-L', required=True, choices=['baseline', 'perceptron', 'neuralnet', 'decisiontree', 'knn', 'cluster'], help='Learning Algorithm')
         parser.add_argument('-A', '--arff', metavar='filename', required=True, help='ARFF file')
         parser.add_argument('-E', metavar=('METHOD', 'args'), required=True, nargs='+', help="Evaluation method (training | static <test_ARFF_file> | random <%%_for_training> | cross <num_folds>)")
 
