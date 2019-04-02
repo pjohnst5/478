@@ -12,6 +12,7 @@ class Cluster():
         self.aScores = {}
         self.bScores = {}
         self.sScores = {}
+        self.sScore = None
 
     def __str__(self):
         string = "\nCluster\n"
@@ -23,10 +24,13 @@ class Cluster():
         return string
 
     def calcSScores(self):
+        sum = 0
         for index in self.instanceIndexes:
             bScore = self.bScores[index]
             aScore = self.aScores[index]
             self.sScores[index] = ( ( bScore - aScore ) / ( max(bScore, aScore) ) )
+            sum += self.sScores[index]
+        self.sScore = sum / len(self.instanceIndexes)
 
 
 class ClusterLearner(SupervisedLearner):
@@ -35,8 +39,16 @@ class ClusterLearner(SupervisedLearner):
     """
 
     def __init__(self):
-        self.debug = True
+        self.debug = False
         pass
+
+    def arrayToString(self, array):
+        string = "["
+        for elem in array:
+            string += str(round(elem, 3))
+            string += ", "
+        string += "]"
+        return string
 
     def printMatrix(self, matrix, title):
         print("\n",title)
@@ -50,14 +62,20 @@ class ClusterLearner(SupervisedLearner):
         print()
 
     def printClusters(self):
-        #Print number of clusters
-        print("Computing centroids")
-
-        #Centroid values of each cluster
-        #Number of instances tied to that cluster
-        #Sse of each cluster
-        #Total SSE of full clustering
-        pass
+        print("\nNumber of clusters:", len(self.clusters))
+        for i in range(len(self.clusters)):
+            print("\tCentroid", i, "=", self.arrayToString(self.clusters[i].centroid))
+        print("Number of instances in each cluster")
+        for i in range(len(self.clusters)):
+            print("\tCluster",i,": ", len(self.clusters[i].instanceIndexes))
+        print("SSEs")
+        for i in range(len(self.clusters)):
+            print("\tCluster",i,": ", round(self.calcClusterSSE(self.clusters[i]), 3))
+        print("Silhouettes")
+        for i in range(len(self.clusters)):
+            print("\tSilhouette:", round(self.clusters[i].sScore, 3) )
+        print("Total SSE: ", round(self.calcTotalSSE(), 3))
+        print("Total Silhouette: ", round(self.calcSilhouetteScore(),3))
 
     def calcClusterSSE(self, cluster):
         if len(cluster.instanceIndexes) == 0:
@@ -234,9 +252,31 @@ class ClusterLearner(SupervisedLearner):
             if randomKs:
                 if self.debug:
                     print("Using random k instances as initial centroids\n")
-                randInstIndexes = np.random.permutation(self.features.rows)[0:k]
-                for index in randInstIndexes:
-                    self.clusters.append(Cluster(self.data[index]))
+                # randInstIndexes = np.random.permutation(self.features.rows)[0:k]
+                # for index in randInstIndexes:
+                #     self.clusters.append(Cluster(self.data[index]))
+
+                minDistance = 1
+                randInstIndexes = np.random.permutation(self.features.rows)
+                chosenCount = 0
+                index = 0
+                while chosenCount < k:
+                    if len(randInstIndexes) - index < (k - chosenCount):
+                        raise Exception("Too strict a minimum distance")
+
+                    newInstance = self.data[randInstIndexes[index]]
+
+                    wasTooClose = False
+                    for clust in self.clusters:
+                        if self.calcDistance(clust.centroid, newInstance) < minDistance:
+                            wasTooClose = True
+
+                    if wasTooClose:
+                        index += 1
+                    else:
+                        self.clusters.append(Cluster(newInstance))
+                        chosenCount += 1
+                print("minDist:", minDistance," remaining instances: ", len(randInstIndexes)-index)
 
             else:
                 if self.debug:
@@ -259,7 +299,7 @@ class ClusterLearner(SupervisedLearner):
                     self.calcCentroid(self.clusters[i])
 
                     if self.debug:
-                        print("Centroid", i, "=", self.clusters[i].centroid)
+                        print("Centroid", i, "=", self.arrayToString(self.clusters[i].centroid))
 
                 self.findMembers()
 
@@ -283,3 +323,6 @@ class ClusterLearner(SupervisedLearner):
                     oldSSE = newSSE
                     newSSE = 0
                 iterationCount += 1
+
+        self.calcSilhouetteScore()
+        self.printClusters()

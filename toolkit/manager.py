@@ -203,30 +203,29 @@ class MLSystemManager:
 
         #Added this training method for clustering
         elif eval_method == "clustering":
-            useOutputLabel = False
-            useFirstColumn = False
-            randomKs = False
-            k = 5
+            useOutputLabel = True
+            useFirstColumn = True
+            randomKs = True
+            k = 4
 
             instances = None
             if useOutputLabel and useFirstColumn:
-                print("Using output label, using first column\n")
+                if learner.debug:
+                    print("Using output label, using first column\n")
                 instances = Matrix(data, 0, 0, data.rows, data.cols)
             elif (not useOutputLabel) and useFirstColumn:
-                print("Not using output label, using first column\n")
+                if learner.debug:
+                    print("Not using output label, using first column\n")
                 instances = Matrix(data, 0, 0, data.rows, data.cols-1)
             elif (not useOutputLabel) and (not useFirstColumn):
-                print("Not using output label, not using first column\n")
+                if learner.debug:
+                    print("Not using output label, not using first column\n")
                 instances = Matrix(data, 0, 1, data.rows, data.cols-2)
             else:
                 raise Exception("Why would you use the output label but not the first column??")
 
             #make the clusters
             learner.makeClusters(instances, k, randomKs)
-
-            #calculate sses
-
-
 
         else:
             raise Exception("Unrecognized evaluation method '{}'".format(eval_method))

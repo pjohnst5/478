@@ -256,7 +256,7 @@ class Matrix:
                 print(" CONTINUOUS")
             else:
                 print(" {{{}}}".format(", ".join(self.enum_to_str[i].values())))
-        
+
         print("@DATA")
         for i in range(self.rows):
             r = self.row(i)
