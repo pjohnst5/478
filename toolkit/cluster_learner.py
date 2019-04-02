@@ -256,7 +256,7 @@ class ClusterLearner(SupervisedLearner):
                 # for index in randInstIndexes:
                 #     self.clusters.append(Cluster(self.data[index]))
 
-                minDistance = 1
+                minDistance = 1.3
                 randInstIndexes = np.random.permutation(self.features.rows)
                 chosenCount = 0
                 index = 0
@@ -271,11 +271,11 @@ class ClusterLearner(SupervisedLearner):
                         if self.calcDistance(clust.centroid, newInstance) < minDistance:
                             wasTooClose = True
 
-                    if wasTooClose:
-                        index += 1
-                    else:
+                    if not wasTooClose:
                         self.clusters.append(Cluster(newInstance))
                         chosenCount += 1
+                    index += 1
+
                 print("minDist:", minDistance," remaining instances: ", len(randInstIndexes)-index)
 
             else:
