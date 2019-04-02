@@ -30,5 +30,5 @@ plt.title("Abalone normalization (ouput label used as feature) Min. Initial Cent
 plt.xlabel("Minimum Distance")
 plt.ylabel("Avg. Silhouette")
 
-plt.plot( 'x', 'y1', data=df, marker='', color='cobalt', linewidth=2)
+plt.plot( 'x', 'y1', data=df, marker='', color='blue', linewidth=2)
 plt.show()
