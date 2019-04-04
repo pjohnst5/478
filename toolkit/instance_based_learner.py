@@ -8,7 +8,7 @@ import numpy as np
 np.seterr(invalid='ignore')
 
 
-class InstanceBasedLearner(GroupLearner):
+class InstanceBasedLearner(SupervisedLearner):
     """
     This is the nearest neighbor Learner
     """

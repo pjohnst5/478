@@ -291,7 +291,7 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output nodes, last is num of input nodes
         #numbers between are node counts for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, 64, inputNodeCount])
+        self.createNetwork([outputNodeCount, 65, inputNodeCount])
 
         done = False
         inputIndex = 0
