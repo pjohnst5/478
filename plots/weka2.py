@@ -24,7 +24,6 @@ label='Side-by-Side Dataset')
 
 
 plt.ylim(0,1.0)
-plt.xlabel('Weka Model', fontsize=font_size_large)
 plt.ylabel('Classification Accuracy', fontsize=font_size_large)
 plt.title('Weka Model Accuracies (cont.)\n', fontweight='bold', fontsize=font_size_large)
 plt.xticks(index + bar_width, ('JRip', 'Decision\nTable', 'PART', 'Simple\nLogistic', 'Lazy\nK\nStar', 'SGD'), fontsize=font_size_large)

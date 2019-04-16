@@ -391,7 +391,6 @@ class NeuralNetLearner(SupervisedLearner):
 
         return bestOutputIndex
 
-
     def accuracy_and_mse(self, features, labels, confusion=None):
         mse = 0.0
         sse = 0.0

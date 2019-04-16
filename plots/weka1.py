@@ -5,7 +5,6 @@ n_groups = 6
 differencesAccuracies = (0.4727, 0.5746, 0.5519, 0.5542, 0.5273, 0.572)
 sidebysideAccuracies = (0.4727, 0.8683, 0.8003, 0.8714, 0.8538, 0.8685)
 
-fig, ax = plt.subplots()
 index = np.arange(n_groups)
 bar_width = 0.25
 opacity = 0.8
