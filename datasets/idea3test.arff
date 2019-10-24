@@ -1,0 +1,33 @@
+@relation worldSeries
+% for the following attributes, there are 2 of each
+% each attribute corresponds to one of the competing teams
+@attribute league           {0,1}
+@attribute league           {0,1}
+@attribute winPercentage    REAL
+@attribute winPercentage    REAL
+@attribute battingAvg       REAL
+@attribute battingAvg       REAL
+@attribute ops              REAL
+@attribute ops              REAL
+@attribute era              REAL
+@attribute era              REAL
+@attribute whip             REAL
+@attribute whip             REAL
+@attribute pb               REAL
+@attribute pb               REAL
+@attribute fpct             REAL
+@attribute fpct             REAL
+@attribute champion         {0,1}
+
+
+@data
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0
+0,1,0.574,0.66,0.265,0.274,0.342,0.848,4.27,3.66,1.29,1.13,16,7,0.985,0.988,0

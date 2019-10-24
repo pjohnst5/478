@@ -291,13 +291,13 @@ class NeuralNetLearner(SupervisedLearner):
 
         #First num in array is num of output nodes, last is num of input nodes
         #numbers between are node counts for hidden layers (including bias)
-        self.createNetwork([outputNodeCount, 65, inputNodeCount])
+        self.createNetwork([outputNodeCount, 8, inputNodeCount])
 
         done = False
         inputIndex = 0
         totalEpochs = 0
         epochsNoProgress = 0
-        epochsNoProgressCap = 15
+        epochsNoProgressCap = 30
         sseTrain = 0.0
         mseTrain = 0.0
         mseValid = 0.0
